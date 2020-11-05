@@ -39,7 +39,7 @@ You can find me at:
       <guid>https://adibpr.github.io/posts/oldpost/linux-vpn-via-pptp-dari-terminal/</guid>
       <description>Sebagai salah satu cara untuk terhubung dengan resource yang ada di kantor ketika kita berada diluar (remote) adalah dengan menggunakan VPN. Ada beberapa jenis VPN, seperti openvpn dan pptp. Kali ini saya akan membahas proses koneksi VPN menggunakan PPTP di linux melalui command line.
 Langkahnya adalah :
- Memeriksa file yang dibutuhkan Membuat file konfigurasi Membuat koneksi Set default routing  1. Memeriksa file yang dibutuhkan Untuk dapat terhubung melalui VPN PPTP, ada 3 hal yang harus dimiliki, yakni:</description>
+ Memeriksa file yang dibutuhkan Membuat file konfigurasi Membuat koneksi Set default routing  1. Requirements Untuk dapat terhubung melalui VPN PPTP, ada 3 hal yang harus dimiliki, yakni:</description>
     </item>
     
   </channel>

@@ -3,9 +3,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-sccale=1">
   <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/css/mine.css">
   <link rel="stylesheet" type="text/css" href="/css/syntax.css">
@@ -49,11 +47,11 @@
     
       
         
-        <a class="btn btn-sm btn-outline-dark tag-btn" href="https://adibpr.github.io/tags/linux">Linux</a>
+        <a class="btn btn-sm btn-outline-dark tag-btn tag" href="https://adibpr.github.io/tags/linux">linux</a>
       
     
   </center>
-  <br><br>
+  <br>
 
   <div id="content">
     <p>Sebagai salah satu cara untuk terhubung dengan <em>resource</em> yang ada di kantor ketika kita berada diluar (<em>remote</em>) adalah dengan menggunakan VPN.
@@ -66,7 +64,7 @@ Kali ini saya akan membahas proses koneksi VPN menggunakan PPTP di linux melalui
 <li>Membuat koneksi</li>
 <li>Set default routing</li>
 </ol>
-<h2 id="1memeriksa-file-yang-dibutuhkan">1. Memeriksa file yang dibutuhkan</h2>
+<h2 id="1-_requirements_">1. <em>Requirements</em></h2>
 <p>Untuk dapat terhubung melalui VPN PPTP, ada 3 hal yang harus dimiliki, yakni:</p>
 <ol>
 <li><em>gateway</em> (atau ip) dari servernya (contoh <code>123.123.123.123</code>)</li>
@@ -75,9 +73,9 @@ Kali ini saya akan membahas proses koneksi VPN menggunakan PPTP di linux melalui
 </ol>
 <p>Install <code>pptp-client</code>, pastikan perintah <code>pon</code> dan <code>poff</code> tersedia.
 Pada beberapa kasus, kedua perintah ini telah terinstall, namun tidak di lokasi yang terekspose oleh environment, seperti pada lokasi <code>/usr/share/doc/ppp/scripts</code>.</p>
-<h2 id="2-buat-file-konfigurasi">2. Buat file konfigurasi</h2>
+<h2 id="2-konfigurasi">2. Konfigurasi</h2>
 <p>Terdapat dua file yang harus di buat/edit.</p>
-<p><strong>PERTAMA</strong>, membuat konfigurasi PPTP.
+<p><strong>Pertama</strong>, membuat konfigurasi PPTP.
 Buat file pada folder <code>/etc/ppp/peers/mypptp</code>, dengan penamaan bebas (contoh disini: <em>mypptp</em>).
 Isi file tersebut adalah:</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -110,7 +108,7 @@ persist
 </div>
 </div><p>Isikan GATEWAY dan USERNAME sesuai dengan konfig yang diberikan, sedangkan isi PPTP_NAME dengan nama filenya.
 Nama file ini nantinya akan menjadi nama koneksi PPTPnya.</p>
-<p><strong>KEDUA</strong>, edit file <code>/etc/ppp/chap-secrets</code>, tambahkan baris sesuai dengan konfigurasi yang diberikan:</p>
+<p><strong>Kedua</strong>, edit file <code>/etc/ppp/chap-secrets</code>, tambahkan baris sesuai dengan konfigurasi yang diberikan:</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -125,19 +123,18 @@ Nama file ini nantinya akan menjadi nama koneksi PPTPnya.</p>
 </div>
 </div><p>Isikan USERNAME, PPTP_NAME dan PASSWORD dengan nilanya masing-masing.
 Ingat tanda * pada kolom IP adresses.</p>
-<h2 id="3-membuat-koneksi">3. Membuat koneksi</h2>
-<p>Untuk melakukan koneksi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pon pptp_gw 
-</code></pre></div><p>Atau jika ingin melakukan <em>debugging</em>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pon pptp_gw debug dump nodetach 
-</code></pre></div><p>Untuk menutup koneksi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">poff pptp_gw 
-</code></pre></div><p>Gunakan perintah <code>ip addr</code> untuk melihat apakan interface koneksi sudah (ppp0) sudah up.
+<h2 id="3-koneksi">3. Koneksi</h2>
+<p>Untuk melakukan koneksi: <code>pon PPTP_NAME</code>.
+Atau jika ingin melakukan <em>debugging</em>:
+<code>pon PPTP_NAME debug dump nodetach</code>
+Untuk menutup koneksi gunakan:
+<code>poff PPTP_NAME </code></p>
+<p>Gunakan perintah <code>ip addr</code> untuk melihat apakan interface koneksi sudah (ppp0) sudah up.
 Jika ppp0 selalu DOWN, bisa jadi dikarenakan ada module kernel yang belum di load.
-Solusinya adalah jalankan:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo modprobe nf_conntrack_pptp
-</code></pre></div><p>Jika status interface menjadi UNKNOWN, tandanya koneksi bisa dilakukan.</p>
-<h2 id="4-default-routing">4. Default routing</h2>
+Solusinya adalah jalankan:
+<code>sudo modprobe nf_conntrack_pptp</code>
+Jika status interface menjadi UNKNOWN, tandanya koneksi bisa dilakukan.</p>
+<h2 id="4-routing">4. Routing</h2>
 <p>Agar menggunakan VPN ini sebagai ruting <em>default</em>:</p>
 <ol>
 <li>Cek ruting default mengunakan <code>ip route</code></li>
