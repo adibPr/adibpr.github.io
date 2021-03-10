@@ -6,10 +6,20 @@
     <description>Recent content on Adib.notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Mar 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://adibpr.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A Jupyter notebook - GDrive - Hugo test connection</title>
+      <link>https://adibpr.github.io/posts/21.03.-jupyter_gdrive_hugo/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adibpr.github.io/posts/21.03.-jupyter_gdrive_hugo/</guid>
+      <description>First, let&amp;rsquo;s try some plotting and some code!
+import seaborn as sns sns.set_theme(style=&amp;#34;ticks&amp;#34;) df = sns.load_dataset(&amp;#34;penguins&amp;#34;) sns.pairplot(df, hue=&amp;#34;species&amp;#34;) Matplotlib is building the font cache using fc-list. This may take a moment. &amp;lt;seaborn.axisgrid.PairGrid at 0x7f7c7037fe10&amp;gt;     How about that?</description>
+    </item>
     
     <item>
       <title>My Simple Hugo Theme </title>
