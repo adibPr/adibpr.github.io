@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-sccale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/mine.css">
+  <link rel="stylesheet" type="text/css" href="/css/syntax.css">
+  
+  
+  <title>Adib.notes|A Jupyter notebook - GDrive - Hugo Blogging Platform</title>
+
+</head>
+<body>
+        <div class="container">
+          <div class="row">
+
+            <div id="lsidebar" class="col-2">
+            </div>
+
+            <div id="centerbar" class="col-8"><div id="mynav">
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="/"><i data-feather="home"></i> Home </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/tags"><i data-feather="hash"></i> Tags </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/project"><i data-feather="code"></i> Project </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/about"><i data-feather="user"></i> About </a>
+    </li>
+  </ul>
+</div>
+<br>
+  <center>
+    <h1>A Jupyter notebook - GDrive - Hugo Blogging Platform</h1>
+    
+
+<time datetime="2021-03-08">Mar 08, 2021</time>
+
+
+    <br>
+    
+      
+        
+        <a class="btn btn-sm btn-outline-dark tag-btn tag" href="https://adibpr.github.io/tags/hugo">hugo</a>
+      
+        
+        <a class="btn btn-sm btn-outline-dark tag-btn tag" href="https://adibpr.github.io/tags/jupyter-notebook">jupyter notebook</a>
+      
+        
+        <a class="btn btn-sm btn-outline-dark tag-btn tag" href="https://adibpr.github.io/tags/rclone">rclone</a>
+      
+    
+  </center>
+  <br>
+
+  <div id="content">
+    <p>Markdown is a good format to write almost anything. But we as a data scientist, use Jupyter Notebook, a lot. We could do a very rapid experiment, with plot, data frame, etc.
+This makes me wonder, is it possible to turn a jupyter notes into a blog post?
+I actually try to do this at my current company, to create some sort of knowledge management platform for our research team.</p>
+<p>The idea is to do some rapid experimentation with jupyter notebook, and when we found something useful, or interesting, we then add some markdown (jupyter notebook support markdown cell), to comment, or perhaps explain our code.
+Then using jupyter notebook converter (<code>jupyter-nbconvert</code>), and viola, we get a markdown that could be used in our hugo sites.</p>
+<p>I&rsquo;ll try to explain briefly the step needed, and what&rsquo;s the modification I made for my personal use (i.e this blog).</p>
+<h2 id="requirements">Requirements</h2>
+<ol>
+<li><a href="https://rclone.org/">rclone</a>, a multipurpose syncing program,</li>
+<li>Jupyter notebook (with <code>jupyter-nbconvert</code> command installed),</li>
+<li><a href="https://gohugo.io/">Hugo</a>, or you can use any markdown based static website generator.</li>
+</ol>
+<p>The basic idea are simple:</p>
+<p>jupyter notes &ndash;&gt; <code>jupyter-nbconvert</code> &ndash;&gt; markdown &ndash;&gt; post processing &ndash;&gt; hugo.</p>
+<p>When we are running the conversion from .ipynb to markdown, <code>nbconvert</code> will produce a folder that contains all the images in that note. The markdown version of basic conversion will use the relative part to address the image. But since we want to put it into a server, we need to move the image into a location that accessible from outside of the server.</p>
+<p>In my knowledge base project, since we are using an internal server, we could put the image in the web server public directory, i.e <code>/var/www/html/note_image</code>, so we can access it with <code>local_ip/note_image</code>.
+The next step then to convert all image references in our markdown with its public location.
+I use regex for this, to find any relative link, and replace them.</p>
+<p>But since for this blog, I&rsquo;m using github pages, I don&rsquo;t have access to it&rsquo;s web server.
+I can put my image in a normal folder in my Hugo project. However, since some experimentations might contains several images from plot, I need another solution.</p>
+<p>And that solution is: <strong>Google Drive</strong>.</p>
+<h2 id="syncing-and-sharing">Syncing and Sharing</h2>
+<p>I decided to use google drive to serve my image because not only it&rsquo;s free (new user get 15G for free), but also I could use it as my backup for my notes and my markdown.
+The question then, how to use it to serve our image?</p>
+<p>The answer is on this <a href="https://stackoverflow.com/questions/10311092/displaying-files-e-g-images-stored-in-google-drive-on-a-website">stackoverflow post</a>. Note that I&rsquo;m using it on my low traffic blog, so I might not need to worry about access quota anytime soon.
+And also, we need to enable shared by link access on your image, so it can be seen by others anonymously.</p>
+<p>Since we just need the shared file id, I created a hugo shortcut to access the image by just providing the id.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">center</span>&gt;
+  &lt;<span style="color:#000080">div</span> <span style="color:#008080">class</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;about-img&#34;</span>&gt;
+    &lt;<span style="color:#000080">img</span> <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;https://drive.google.com/uc?export=view&amp;id={{ .Get &#34;</span><span style="color:#008080">id</span><span style="color:#a61717;background-color:#e3d2d2">&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">}}&#34;</span>
+      <span style="color:#008080">alt</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;profile&#34;</span>
+      <span style="color:#008080">style</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;
+</span><span style="color:#d14">             width: {{ with .Get &#34;</span><span style="color:#008080">width</span><span style="color:#a61717;background-color:#e3d2d2">&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">}}{{.}};{{</span><span style="color:#008080">else</span><span style="color:#a61717;background-color:#e3d2d2">}}</span><span style="color:#008080">50</span><span style="color:#a61717;background-color:#e3d2d2">%;{{</span><span style="color:#008080">end</span><span style="color:#a61717;background-color:#e3d2d2">}}</span> 
+             <span style="color:#008080">height:</span> <span style="color:#a61717;background-color:#e3d2d2">{{</span> <span style="color:#008080">with</span> <span style="color:#a61717;background-color:#e3d2d2">.</span><span style="color:#008080">Get</span> <span style="color:#a61717;background-color:#e3d2d2">&#34;</span><span style="color:#008080">height</span><span style="color:#a61717;background-color:#e3d2d2">&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">}}{{.}};{{</span><span style="color:#008080">else</span><span style="color:#a61717;background-color:#e3d2d2">}}</span><span style="color:#008080">60</span><span style="color:#a61717;background-color:#e3d2d2">%;{{</span><span style="color:#008080">end</span><span style="color:#a61717;background-color:#e3d2d2">}}&#34;</span>
+    &gt;
+  &lt;/<span style="color:#000080">div</span>&gt;
+&lt;/<span style="color:#000080">center</span>&gt;
+&lt;<span style="color:#000080">br</span>&gt;
+</code></pre></div><p>Then, we can use it in our markdown with this (assuming the shortcut name is gdrive_img):</p>
+<pre><code>{{ &lt;gdrive_img id=your_img_id &gt;}}
+</code></pre><p>Currently, the process of getting the image shared link on the google drive is still manual.
+I&rsquo;m planning on creating an automatic process, using google drive API.</p>
+<p>You can see my code in:
+<a href="https://github.com/adibPr/adibpr.site">https://github.com/adibPr/adibpr.site</a>, on the <code>/script</code> folder.
+All you need to do is just run the <code>convert.py</code> file, with input-file location, and optionally the output-file and media-file location, like this:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python convert.py --input-file my_notes.ipynb --output-file my_notes.md --media-file media/my_notes
+</code></pre></div>
+  </div>
+
+
+            </div>
+
+            <div id="rsidebar" class="col-2">
+            </div>
+
+          </div>
+        </div><script src="/js/jquery-3.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/feather.min.js"></script>
+<script>
+  feather.replace()
+</script>
+</body>
+</html>

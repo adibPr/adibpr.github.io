@@ -12,13 +12,12 @@
     
     
     <item>
-      <title>A Jupyter notebook - GDrive - Hugo test connection</title>
-      <link>https://adibpr.github.io/posts/21.03.-jupyter_gdrive_hugo/</link>
+      <title>A Jupyter notebook - GDrive - Hugo Blogging Platform</title>
+      <link>https://adibpr.github.io/project/02_jupyter_gdrive/</link>
       <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://adibpr.github.io/posts/21.03.-jupyter_gdrive_hugo/</guid>
-      <description>First, let&amp;rsquo;s try some plotting and some code!
-import seaborn as sns sns.set_theme(style=&amp;#34;ticks&amp;#34;) df = sns.load_dataset(&amp;#34;penguins&amp;#34;) sns.pairplot(df, hue=&amp;#34;species&amp;#34;) Matplotlib is building the font cache using fc-list. This may take a moment. &amp;lt;seaborn.axisgrid.PairGrid at 0x7f7c7037fe10&amp;gt;     How about that?</description>
+      <guid>https://adibpr.github.io/project/02_jupyter_gdrive/</guid>
+      <description>Markdown is a good format to write almost anything. But we as a data scientist, use Jupyter Notebook, a lot. We could do a very rapid experiment, with plot, data frame, etc. This makes me wonder, is it possible to turn a jupyter notes into a blog post? I actually try to do this at my current company, to create some sort of knowledge management platform for our research team.</description>
     </item>
     
     <item>
