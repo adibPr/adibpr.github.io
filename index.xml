@@ -6,13 +6,9 @@
     <description>Recent content on Adib.notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Mar 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://adibpr.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 08 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adibpr.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>A Jupyter notebook - GDrive - Hugo Blogging Platform</title>
+      <title>A Jupyter notebook - S3 Blogging Platform</title>
       <link>https://adibpr.github.io/project/02_jupyter_gdrive/</link>
       <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
       

@@ -6,11 +6,7 @@
     <description>Recent content in Posts on Adib.notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 May 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://adibpr.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 01 May 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://adibpr.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux VPN via PPTP dari Terminal</title>
       <link>https://adibpr.github.io/posts/oldpost/linux-vpn-via-pptp-dari-terminal/</link>
