@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-sccale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../../css/mine.css">
+  <link rel="stylesheet" type="text/css" href="../../css/syntax.css">
+  
+  
+  <title>Adib.notes|Installing libolm From Source</title>
+
+</head>
+<body>
+        <div class="container">
+          <div class="row">
+
+            <div id="lsidebar" class="col-2">
+            </div>
+
+            <div id="centerbar" class="col-8"><div id="mynav">
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="../../"><i data-feather="home"></i> Home </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../tags"><i data-feather="hash"></i> Tags </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../project"><i data-feather="code"></i> Project </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../about"><i data-feather="user"></i> About </a>
+    </li>
+  </ul>
+</div>
+<br>
+  <center>
+    <h1>Installing libolm From Source</h1>
+    
+
+<time datetime="2021-11-09">Nov 09, 2021</time>
+
+
+    <br>
+    
+      
+        
+        <a class="btn btn-sm btn-outline-dark tag-btn tag" href="https://adibpr.github.io/tags/selfhosted">selfhosted</a>
+      
+    
+  </center>
+  <br>
+
+  <div id="content">
+    <p>I stumble upon this great tool called <a href="https://github.com/8go/matrix-commander">matrix-commander</a> that I think is the simplest way to programmatically interact with your <a href="https://matrix.org/">Matrix</a> server.
+I&rsquo;m using these tools in order to send notifications from my server to my matrix room whenever something interesting happens (i.e when my backup is done, or when someone login to my server).
+It is based on matrix-nio, and only a large single file python.
+But I found one of the dependencies, <a href="https://gitlab.matrix.org/matrix-org/olm">libolm</a>, is quite difficult to install (especially in my raspberry pi).
+They do have a package in pip, but it&rsquo;s only for python version 2.
+Here is what I do to build this library from source.</p>
+<h2 id="installation">Installation</h2>
+<ol>
+<li>Clone the repo, <code>git clone https://gitlab.matrix.org/matrix-org/olm</code></li>
+<li>Build the library like the documentation says:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cmake . -Bbuild
+cmake --build build
+</code></pre></div><ol start="3">
+<li>Go to build directory, and you will find <code>libolm.so.3.2.6</code> along with it&rsquo;s sym link. Copy that to permanent location, like <code>/usr/local/lib</code>.</li>
+<li>Optionally: you could check the content of the build with command <code>nm -D -C -g libolm.so.3.2.6</code>, make sure we have olm related function defined.</li>
+<li>Now it&rsquo;s time to build the python binding. Go to python folder (on the root folder of olm). Set <code>LD_LIBRARY_PATH</code> to the path of your olm library permanent location, i.e:</li>
+</ol>
+<pre tabindex="0"><code>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+</code></pre><ol start="6">
+<li>Install the package by <code>make DESTDIR=/ install-python3</code>. Note about DESTDIR, for some reason, in my case, the root directory isn&rsquo;t included.</li>
+<li>You can test this by trying <code>import olm</code> in your python.</li>
+</ol>
+<h2 id="debugging">Debugging</h2>
+<p>Use this commands to start debuging if something wrong happens:</p>
+<ul>
+<li><code>nm -D -C -g module.so</code> to list the required function inside an object, and whether it&rsquo;s present or not.</li>
+<li>When installing python package, you could see the shared object output in build directory, find a file called <code>_libolm.abi3.so</code>. You can inspect the required module by using <code>ldd module.so</code>. Make sure the required module are present.</li>
+</ul>
+
+  </div>
+
+
+            </div>
+
+            <div id="rsidebar" class="col-2">
+            </div>
+
+          </div>
+        </div><script src="../../js/jquery-3.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/feather.min.js"></script>
+<script>
+  feather.replace()
+</script>
+</body>
+</html>

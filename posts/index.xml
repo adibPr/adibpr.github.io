@@ -2,27 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Adib.notes</title>
-    <link>/posts/</link>
+    <link>https://adibpr.github.io/posts/</link>
     <description>Recent content in Posts on Adib.notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adibpr.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installing libolm From Source</title>
+      <link>https://adibpr.github.io/posts/08-installing-libolm-from-source/</link>
+      <pubDate>Tue, 09 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adibpr.github.io/posts/08-installing-libolm-from-source/</guid>
+      <description>I stumble upon this great tool called matrix-commander that I think is the simplest way to programmatically interact with your Matrix server. I&amp;rsquo;m using these tools in order to send notifications from my server to my matrix room whenever something interesting happens (i.e when my backup is done, or when someone login to my server). It is based on matrix-nio, and only a large single file python. But I found one of the dependencies, libolm, is quite difficult to install (especially in my raspberry pi).</description>
+    </item>
+    
     <item>
       <title>Shortcut to Capture Ideas</title>
-      <link>/posts/shortcut_text/</link>
+      <link>https://adibpr.github.io/posts/shortcut_text/</link>
       <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>/posts/shortcut_text/</guid>
+      <guid>https://adibpr.github.io/posts/shortcut_text/</guid>
       <description>One common theme from the majority of productivity articles/books that I read is to never let use your brain to store information. Use it to generate new ideas, to solve a problem, to think.
 But here is the thing: Sometimes when you are in a state of deep work, focusing on a task at hand, you might suddenly remember other tasks that you need to do later, or you might get an idea for other things that might not be related to your current task.</description>
     </item>
     
     <item>
       <title>Linux VPN via PPTP dari Terminal</title>
-      <link>/posts/oldpost/linux-vpn-via-pptp-dari-terminal/</link>
+      <link>https://adibpr.github.io/posts/oldpost/linux-vpn-via-pptp-dari-terminal/</link>
       <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/posts/oldpost/linux-vpn-via-pptp-dari-terminal/</guid>
+      <guid>https://adibpr.github.io/posts/oldpost/linux-vpn-via-pptp-dari-terminal/</guid>
       <description>Sebagai salah satu cara untuk terhubung dengan resource yang ada di kantor ketika kita berada diluar (remote) adalah dengan menggunakan VPN. Ada beberapa jenis VPN, seperti openvpn dan pptp. Kali ini saya akan membahas proses koneksi VPN menggunakan PPTP di linux melalui command line.
 Langkahnya adalah :
  Memeriksa file yang dibutuhkan Membuat file konfigurasi Membuat koneksi Set default routing  1. Requirements Untuk dapat terhubung melalui VPN PPTP, ada 3 hal yang harus dimiliki, yakni:</description>

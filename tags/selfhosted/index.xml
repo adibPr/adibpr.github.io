@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>selfhosted on Adib.notes</title>
+    <link>https://adibpr.github.io/tags/selfhosted/</link>
+    <description>Recent content in selfhosted on Adib.notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adibpr.github.io/tags/selfhosted/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installing libolm From Source</title>
+      <link>https://adibpr.github.io/posts/08-installing-libolm-from-source/</link>
+      <pubDate>Tue, 09 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adibpr.github.io/posts/08-installing-libolm-from-source/</guid>
+      <description>I stumble upon this great tool called matrix-commander that I think is the simplest way to programmatically interact with your Matrix server. I&amp;rsquo;m using these tools in order to send notifications from my server to my matrix room whenever something interesting happens (i.e when my backup is done, or when someone login to my server). It is based on matrix-nio, and only a large single file python. But I found one of the dependencies, libolm, is quite difficult to install (especially in my raspberry pi).</description>
+    </item>
+    
+  </channel>
+</rss>
