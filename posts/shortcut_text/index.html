@@ -6,7 +6,6 @@
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../../css/mine.css">
-  <link rel="stylesheet" type="text/css" href="../../css/syntax.css">
   
   
   <title>Adib.notes|Shortcut to Capture Ideas</title>
@@ -61,13 +60,13 @@ This is what I have in my setup.</p>
 <h2 id="linux">Linux</h2>
 <p>For linux, it&rsquo;s easy. All I need to do is just create a bash script that will open a text editor (I&rsquo;m using vim) with timestamp as the filename.
 The code is like this</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#999;font-weight:bold;font-style:italic">#!/bin/bash
-</span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#008080">DIRECTORY</span><span style="color:#000;font-weight:bold">=</span>/home/adib/notes
-<span style="color:#008080">FNAME</span><span style="color:#000;font-weight:bold">=</span><span style="color:#008080">$DIRECTORY</span>/<span style="color:#d14">`</span>date +<span style="color:#d14">&#39;%F %T %N&#39;</span> | sed s/:/-/g<span style="color:#d14">`</span>
-<span style="color:#008080">EDITOR</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;vim -c &#39;startinsert&#39;&#34;</span>
-<span style="color:#008080">TERMINAL</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;mate-terminal&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>DIRECTORY<span style="color:#f92672">=</span>/home/adib/notes
+FNAME<span style="color:#f92672">=</span>$DIRECTORY/<span style="color:#e6db74">`</span>date +<span style="color:#e6db74">&#39;%F %T %N&#39;</span> | sed s/:/-/g<span style="color:#e6db74">`</span>
+EDITOR<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;vim -c &#39;startinsert&#39;&#34;</span>
+TERMINAL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mate-terminal&#34;</span>
 
-<span style="color:#008080">$TERMINAL</span> -e <span style="color:#d14">&#34;</span><span style="color:#008080">$EDITOR</span><span style="color:#d14"> \&#34;</span><span style="color:#008080">$FNAME</span><span style="color:#d14">\&#34;&#34;</span>
+$TERMINAL -e <span style="color:#e6db74">&#34;</span>$EDITOR<span style="color:#e6db74"> \&#34;</span>$FNAME<span style="color:#e6db74">\&#34;&#34;</span>
 </code></pre></div><p>Put it into somewhere that are accessible via <code>$PATH</code>.</p>
 <p>Next, I just create a shortcut (for example Wn + n) to automatically run this program.
 Since I&rsquo;m using <a href="https://i3wm.org/">i3</a>, I just put it in my config file, with line:</p>
