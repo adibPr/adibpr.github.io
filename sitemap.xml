@@ -2,48 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://adibpr.github.io/</loc>
+    <loc>/</loc>
     <lastmod>2021-11-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adibpr.github.io/posts/08-installing-libolm-from-source/</loc>
+    <loc>/posts/08-installing-libolm-from-source/</loc>
     <lastmod>2021-11-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adibpr.github.io/posts/</loc>
+    <loc>/posts/</loc>
     <lastmod>2021-11-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adibpr.github.io/tags/selfhosted/</loc>
+    <loc>/tags/selfhosted/</loc>
     <lastmod>2021-11-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adibpr.github.io/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>2021-11-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adibpr.github.io/posts/shortcut_text/</loc>
+    <loc>/posts/shortcut_text/</loc>
     <lastmod>2021-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adibpr.github.io/project/02_jupyter_gdrive/</loc>
+    <loc>/project/02_jupyter_gdrive/</loc>
     <lastmod>2021-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adibpr.github.io/tags/project/</loc>
+    <loc>/tags/project/</loc>
     <lastmod>2021-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adibpr.github.io/tags/s3/</loc>
+    <loc>/tags/s3/</loc>
     <lastmod>2021-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adibpr.github.io/project/01_site/</loc>
+    <loc>/project/01_site/</loc>
     <lastmod>2020-10-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adibpr.github.io/about/</loc>
+    <loc>/about/</loc>
     <lastmod>2019-11-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adibpr.github.io/project/</loc>
+    <loc>/project/</loc>
     <lastmod>2019-11-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adibpr.github.io/tags/linux/</loc>
+    <loc>/tags/linux/</loc>
     <lastmod>2017-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adibpr.github.io/posts/oldpost/linux-vpn-via-pptp-dari-terminal/</loc>
+    <loc>/posts/oldpost/linux-vpn-via-pptp-dari-terminal/</loc>
     <lastmod>2017-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adibpr.github.io/categories/</loc>
+    <loc>/categories/</loc>
   </url>
 </urlset>

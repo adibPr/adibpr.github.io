@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My Project on Adib.notes</title>
-    <link>https://adibpr.github.io/project/</link>
+    <link>/project/</link>
     <description>Recent content in My Project on Adib.notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://adibpr.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Jupyter notebook - S3 Blogging Platform</title>
-      <link>https://adibpr.github.io/project/02_jupyter_gdrive/</link>
+      <link>/project/02_jupyter_gdrive/</link>
       <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://adibpr.github.io/project/02_jupyter_gdrive/</guid>
+      <guid>/project/02_jupyter_gdrive/</guid>
       <description>Markdown is a good format to write almost anything. But we as a data scientist, use Jupyter Notebook, a lot. We could do a very rapid experiment, with plot, data frame, etc. This makes me wonder, is it possible to turn a jupyter notes into a blog post? I actually try to do this at my current company, to create some sort of knowledge management platform for our research team.</description>
     </item>
     
     <item>
       <title>My Simple Hugo Theme </title>
-      <link>https://adibpr.github.io/project/01_site/</link>
+      <link>/project/01_site/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://adibpr.github.io/project/01_site/</guid>
+      <guid>/project/01_site/</guid>
       <description>This website is built using hand crafted theme as a medium for me to learn Hugo theming. It&amp;rsquo;s not that beauty since I&amp;rsquo;m not a web developer, but I&amp;rsquo;ve learned so much about hugo and CSS/HTML in general. You can find the code in here.</description>
     </item>
     
