@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-sccale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../../css/mine.css">
+  
+  
+  <title>Adib.notes|Get Modified Files Within Two Snapshot</title>
+
+</head>
+<body>
+        <div class="container">
+          <div class="row">
+
+            <div id="lsidebar" class="col-2">
+            </div>
+
+            <div id="centerbar" class="col-8"><div id="mynav">
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="../../"><i data-feather="home"></i> Home </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../tags"><i data-feather="hash"></i> Tags </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../project"><i data-feather="code"></i> Project </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../about"><i data-feather="user"></i> About </a>
+    </li>
+  </ul>
+</div>
+<br>
+  <center>
+    <h1>Get Modified Files Within Two Snapshot</h1>
+    
+
+<time datetime="2022-06-02">Jun 02, 2022</time>
+
+
+    <br>
+    
+      
+        
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="tags/project">project</a>
+      
+        
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="tags/python">python</a>
+      
+    
+  </center>
+  <br>
+
+  <div id="content">
+    <p>To make my blogging habit a little bit easier, I create a tool to easily convert my jupyter notebooks to markdown that could be parsed into <a href="https://gohugo.io/">Hugo</a>, called <a href="https://github.com/adibPr/pynote2mds3/">pynote2mds3</a> that use <code>nbconvert</code> to convert and upload any image into S3. However, I soon find out that I need to manually run this command for each of my new posts and I kind of looking for a way to automate that. The solution is using <code>make</code>.</p>
+<p><code>make</code> is a great and flexible tool. I&rsquo;ve been using Linux for quite some time, and have been interacting with makefile and cmake before but only as a user. I never actually write a Makefile until recently and was blown away by its usefulness and its simplicity. For this blog, I simply create an entry in my makefile to convert all modified/new notebooks to markdown using my tool.</p>
+<p>But the problem is I need a way to filter files that are only modified, or new in my notebooks directory. We do not want to reprocess all unchanged files. I tried looking for another simple solution, like using Linux command <code>find</code> to find all files that are being modified in the last <em>n</em> minutes, but that is still not enough for my need. Then as a challenge, I decided to write a simple script to accomplish that.</p>
+<p>The idea is to use <a href="https://pythonhosted.org/watchdog/">watchdog</a> dirsnapshot function to create a snapshot of a folder, and compare it to the previous snapshot.<br>
+Using watchdog, we could create a snapshot of a directory with command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>snapshot<span style="color:#f92672">=</span>DirectorySnapshot(path)
+</span></span></code></pre></div><p>and if you have two snapshot, you can get the difference (i.e files that are modified in one snapshot compare to the others) by using <code>DirectorySnapshotDiff</code> function:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>diff <span style="color:#f92672">=</span> DirectorySnapshotDiff(old_snapshot, new_snapshot)
+</span></span><span style="display:flex;"><span>final_data <span style="color:#f92672">=</span> diff<span style="color:#f92672">.</span>files_created <span style="color:#f92672">+</span> diff<span style="color:#f92672">.</span>files_modified
+</span></span></code></pre></div><p>With this final list of files, I then could pipe it into my converter tools to create the markdown. Now I don&rsquo;t have to type one by one the filename of my notes, I just call <code>make note</code> to convert all my modified/new notes into markdown. Simple right?<br>
+You can see my code for this diff in: <a href="https://gist.github.com/adibPr/5ae61b5f5aa2b3fa64aa0e1d57f9abe0">my gist</a></p>
+
+  </div>
+
+
+            </div>
+
+            <div id="rsidebar" class="col-2">
+            </div>
+
+          </div>
+        </div><script src="../../js/jquery-3.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/feather.min.js"></script>
+<script>
+  feather.replace()
+</script>
+</body>
+</html>
