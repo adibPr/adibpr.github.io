@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-sccale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../../css/mine.css">
+  
+  
+  <title>Adib.notes|Significance Test</title>
+
+</head>
+<body>
+        <div class="container">
+          <div class="row">
+
+            <div id="lsidebar" class="col-2">
+            </div>
+
+            <div id="centerbar" class="col-8"><div id="mynav">
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="../../"><i data-feather="home"></i> Home </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../tags"><i data-feather="hash"></i> Tags </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../project"><i data-feather="code"></i> Project </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../about"><i data-feather="user"></i> About </a>
+    </li>
+  </ul>
+</div>
+<br>
+  <center>
+    <h1>Significance Test</h1>
+    
+
+<time datetime="2022-06-20">Jun 20, 2022</time>
+
+
+    <br>
+    
+      
+        
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="tags/weekly-digest">weekly digest</a>
+      
+        
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="tags/statistics">statistics</a>
+      
+    
+  </center>
+  <br>
+
+  <div id="content">
+    <p>The main idea is we need to know whether this distribution is more likely to happen from another distribution with a level of p. So w need three things:</p>
+<ol>
+<li>The first distribution (base) and its parameter</li>
+<li>The second distribution (comparator) and its parameter</li>
+<li>A limit/threshold for which we could safely say this is different.</li>
+</ol>
+<h3 id="the-z---test">The Z - Test</h3>
+<p>The T-test is for small use case ≤ 30, whereas the z-test is for the normal case. Forget about the T-test. The condition for the T-test:</p>
+<ol>
+<li>Population (not sample) standard deviation is not  known, AND</li>
+<li>The total sample is less than 30</li>
+</ol>
+<p>The assumption for the z-test and t-test is that both samples have the same variance. If not, use the welch test.</p>
+<p>The formula for the Z and T-test is actually equal, only in part of standard deviation, where instead of using sample standard deviation (in t), we are using population standard deviation (in Z). However, if our sample is large enough (≥ 30), we could use our sample standard deviation instead in Z. So both are using sample STD, not population STD (even though if you happen to know it you could use it in Z), but in case of the data is small, use T. (<a href="https://www.youtube.com/watch?v=5ABpqVSx33I">Source</a>)</p>
+<p>Another part that needs to check is the t and z scores based on the table that would be different.</p>
+<p>The formula for Z-test:</p>
+<p>$$
+Z = \frac{\bar{x} - \mu_{(H_0)}}{s/\sqrt{n}}
+$$</p>
+<h3 id="z---test-flow">Z - Test Flow</h3>
+<p>The flow normally:</p>
+<ol>
+<li>Check critical value based on our confidence level, and whether it’s two tail or one-tail test</li>
+<li>Calculate Z score based on the equation above</li>
+<li>Compare our Z with critical value, whether it’s in the rejection region or not</li>
+</ol>
+<h3 id="z-score">Z-Score</h3>
+<p>Measure how many standard deviations our sample means are from the null hypothesis distribution. Normally would range between -3 to 3 (higher that it is probably different).</p>
+<p><img src="https://w7.pngwing.com/pngs/838/921/png-transparent-standard-deviation-variance-probability-distribution-normal-distribution-others-miscellaneous-angle-text-thumbnail.png" alt="https://w7.pngwing.com/pngs/838/921/png-transparent-standard-deviation-variance-probability-distribution-normal-distribution-others-miscellaneous-angle-text-thumbnail.png"></p>
+<h3 id="type-of-zt-test">Type of Z/T Test</h3>
+<ol>
+<li>Comparing sample distribution with population distribution</li>
+<li>Comparing proportion (i.e categorical response ratio) with population proportion.
+<ol>
+<li>Example: comparing the proportion of female STEM students and comparing it with the perceived belief of the population of female STEM</li>
+</ol>
+</li>
+<li>2 sample independent test, comparing one sample distribution with other distributions that are independent of each other.
+<ol>
+<li>Example: AB testing between a set of group control versus a set of treatment control</li>
+</ol>
+</li>
+<li>2 sample dependent test / paired sample test, comparing one distribution before and after.
+<ol>
+<li>Example: testing whether the student gets a higher score in statistics before and after taking a short class</li>
+</ol>
+</li>
+</ol>
+<h3 id="z-and-t-distribution">Z and T distribution</h3>
+<p>Z and T distribution is actually a form of normal distribution, with Z having 0 mean and 1 variance. T looks like Z but is a bit sensitive to sample size (<a href="https://www.econnect-study.com/index.php/statistics-difference-between-z-distribution-and-t-distribution">source</a>).</p>
+<p>So there are three approaches for hypothesis testing:</p>
+<ol>
+<li>Traditional/rejection region</li>
+<li>Confidence Interval</li>
+<li>P-Value and significance level</li>
+</ol>
+<h3 id="z-test-with-python">Z Test with Python</h3>
+<p>Use :</p>
+<p><code>from statsmodels.stats.weightstats import ztest</code></p>
+<p>see: <a href="https://www.statsmodels.org/stable/generated/statsmodels.stats.weightstats.ztest.html">https://www.statsmodels.org/stable/generated/statsmodels.stats.weightstats.ztest.html</a></p>
+<h3 id="one-way-anova-analysis-of-variance">One Way ANOVA (Analysis of Variance)</h3>
+<p>Used to check whether there is a significant difference between three groups/samples. For example, we want to know whether there is a difference in response time between people who drink water, coffee, and lemon juice. We measure the sample, and we could get variance in each group and variance between the group. ANOVA&rsquo;s main idea is to measure it. If the between-group variance is small then it’s not affected, and vice versa.</p>
+<p><img src="https://bucket1.is3.cloudhost.id/%22blog/20220620%20Significance%20Test/%2220220620-ST.png" alt="img/20220620 - ST.png"></p>
+<h3 id="p-value">P-Value</h3>
+<p>Definition: the probability of observing more extreme data than your sample.</p>
+<ul>
+<li>Let&rsquo;s say you have your population ($H_0$) mean, and you have your sample mean.</li>
+<li>Get the z-score from your sample mean (also called critical value).</li>
+<li>What is the probability from your population, that we get the more extreme data from your z-score?</li>
+<li>To get the p-value, you look into the table.</li>
+</ul>
+<p><img src="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-statistics-toolbox/GUID-CBF63B74-D1B2-44FC-A316-7AC2B1C1D464-web.png" alt="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-statistics-toolbox/GUID-CBF63B74-D1B2-44FC-A316-7AC2B1C1D464-web.png"></p>
+<p>Source: <a href="https://www.youtube.com/watch?v=KLnGOL_AUgA">https://www.youtube.com/watch?v=KLnGOL_AUgA</a></p>
+<h4 id="resource">Resource:</h4>
+<ul>
+<li>Intro chi-square vs t-test: <a href="https://home.csulb.edu/~msaintg/ppa696/696stsig.htm">https://home.csulb.edu/~msaintg/ppa696/696stsig.htm</a></li>
+<li>basic significance test: <a href="http://www.stat.yale.edu/Courses/1997-98/101/sigtest.htm">http://www.stat.yale.edu/Courses/1997-98/101/sigtest.htm</a></li>
+</ul>
+
+  </div>
+
+
+            </div>
+
+            <div id="rsidebar" class="col-2">
+            </div>
+
+          </div>
+        </div><script src="../../js/jquery-3.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/feather.min.js"></script>
+<script>
+  feather.replace()
+</script>
+</body>
+</html>
