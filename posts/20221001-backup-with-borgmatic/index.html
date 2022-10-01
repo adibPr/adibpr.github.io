@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-sccale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../../css/mine.css">
+  
+  
+  <title>Adib.notes|Simple Backup with Borgmatic</title>
+
+</head>
+<body>
+        <div class="container">
+          <div class="row">
+
+            <div id="lsidebar" class="col-2">
+            </div>
+
+            <div id="centerbar" class="col-8"><div id="mynav">
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="../../"><i data-feather="home"></i> Home </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../tags"><i data-feather="hash"></i> Tags </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../project"><i data-feather="code"></i> Project </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../about"><i data-feather="user"></i> About </a>
+    </li>
+  </ul>
+</div>
+<br>
+  <center>
+    <h1>Simple Backup with Borgmatic</h1>
+    
+
+<time datetime="2022-10-01">Oct 01, 2022</time>
+
+
+    <br>
+    
+      
+        
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="tags/borg">borg</a>
+      
+        
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="tags/selfhosted">selfhosted</a>
+      
+    
+  </center>
+  <br>
+
+  <div id="content">
+    <p>I&rsquo;m a self-hosted person, I own a VPS and have installed some applications that I use in my day-to-day activities.
+Those apps (like chat server, using <a href="https://matrix.org/">Matrix</a>) are becoming a part of my life, and losing the data that&rsquo;s been there will be disastrous for me.
+Hence, backup is a must thing to do.</p>
+<p>Doing backup isn&rsquo;t that hard, especially if we use the right tools.
+For the past few years, I&rsquo;ve been using <a href="https://www.borgbackup.org/">borg</a> as a tool for doing backup of all my computer-related data. It&rsquo;s a simple and easy-to-use tool. And combine with <a href="https://torsion.org/borgmatic/">borgmatic</a>, a program on top of borg to make the backup process even easier, backing up a whole data, both from a database and from the file, is as simple as running one command. Borgmatic use a configuration file to do the whole process. Here is my simple configuration that I used on regular basis.</p>
+<p><strong>Folder Structure</strong></p>
+<p>Before moving on to the configuration, I&rsquo;d like to share the folder structure of my system.
+I normally have 2 folders in the home folder, the <code>backup</code> folder and the <code>borg</code> folder.</p>
+<pre tabindex="0"><code>-/home/me
+--- backup/
+--- borg/
+</code></pre><p>The <code>backup</code> folder is a regular folder, that contains all the things that I want to backup.
+For example, my <code>nginx</code> configuration is in here (the whole <code>/etc/nginx</code> folder), and then I link it to the <code>/etc</code>. The same with my wireguard configuration folder.
+This is all my configurations, scripts, data, and anything that I want to backup.</p>
+<p>The second folder, <code>borg</code>, is a borg repository. Borg works by creating a repository and adding data to it. This is where your backup data will be, but not in the same format. You can&rsquo;t directly look into this folder. Borg doing some magical things to compress your data and to remember your past data, so it could only update whenever new/updated data is being saved. To create a borg repo with a password, you could use the command:
+<code>borg init --encryption=repokey ~/borg/</code>.</p>
+<p><strong>Configuration</strong></p>
+<p>In the <code>backup</code> folder, apart from the things that I want to back up, I also put my borgmatic configuration in here.
+In most cases, my borgmatic configuration is pretty simple, with only 5-6 things that need to be set up.
+Borgmatic itself uses YAML data format for its configuration, so it&rsquo;s easy to understand.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">location</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">source_directories</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">/home/me/backup</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">repositories</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">/home/me/borg</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">storage</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">encryption_passphrase</span>: <span style="color:#e6db74">&#34;mYl1Tl3SecR3T&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">borg_base_directory</span>: <span style="color:#ae81ff">/home/me/</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">archive_name_format</span>: <span style="color:#e6db74">&#39;auto-{now:%Y-%m-%d}&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">retention</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">keep_weekly</span>: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">keep_monthly</span>: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">prefix</span>: <span style="color:#ae81ff">auto</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">consistency</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">prefix</span>: <span style="color:#ae81ff">auto</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hooks</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">before_backup</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">echo &#34;Starting a backup.&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">after_backup</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">echo &#34;Finished a backup.&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">on_error</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">echo &#34;Error during prune/compact/create/check.&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">after_everything</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">rclone sync --progress /home/me/borg/ S3:/backup/borg/</span>
+</span></span></code></pre></div><p>The first thing that you need to specify is the location of the folder we want to backup and the repository.
+With my structure, this means the <code>~/backup</code> and <code>~/borg</code> folder.</p>
+<p>The second one is the repository configuration, like the password we are using in the repository and the name of the archive. Here, for the archive name, I&rsquo;m using the prefix <code>auto-</code>.</p>
+<p>Next is retention, how many archives we would like to keep. For example, in the configuration above, I want to have 2 weekly archive, and 3 monthly archive. So if for the new week, I already have 2 weeks of archive, the borgmatic will automatically prune/delete the oldest one.</p>
+<p>After setting the prefix for consistency check, the last one is to set up a hook. A hook is a command that will be run in several stages. Here, I create a command to be run before backup, after backup, on an error, and after everything.
+For the sample above, the command is quite simple, just echoing something. But in some cases, you could add a more complex thing. For example, in before_backup, I normally have a command to dump my Postgres database into the <code>backup</code> folder, so it could be backed up as well.</p>
+<p>And also, the after everything hooks, I set up a <a href="https://rclone.org/">rclone</a> process to copy the <code>borg</code> folder to somewhere else, like in an S3.
+This will help me in case of hard disk failure, where I could not retrieve the local <code>borg</code> repository, then I still have the data on the cloud.</p>
+<p>Finally, after the configuration is done, you could do the backup by running: <code>borgmatic -c borgmatic_config.yaml</code>.</p>
+
+  </div>
+
+
+            </div>
+
+            <div id="rsidebar" class="col-2">
+            </div>
+
+          </div>
+        </div><script src="../../js/jquery-3.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/feather.min.js"></script>
+<script>
+  feather.replace()
+</script>
+</body>
+</html>

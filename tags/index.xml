@@ -6,7 +6,25 @@
     <description>Recent content in Tags on Adib.notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>borg</title>
+      <link>/tags/borg/</link>
+      <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/borg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>selfhosted</title>
+      <link>/tags/selfhosted/</link>
+      <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/selfhosted/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>journal</title>
       <link>/tags/journal/</link>
@@ -49,15 +67,6 @@
       <pubDate>Thu, 02 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>selfhosted</title>
-      <link>/tags/selfhosted/</link>
-      <pubDate>Tue, 09 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/selfhosted/</guid>
       <description></description>
     </item>
     

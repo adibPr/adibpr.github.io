@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Adib.notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simple Backup with Borgmatic</title>
+      <link>/posts/20221001-backup-with-borgmatic/</link>
+      <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/20221001-backup-with-borgmatic/</guid>
+      <description>I&amp;rsquo;m a self-hosted person, I own a VPS and have installed some applications that I use in my day-to-day activities. Those apps (like chat server, using Matrix) are becoming a part of my life, and losing the data that&amp;rsquo;s been there will be disastrous for me. Hence, backup is a must thing to do.
+Doing backup isn&amp;rsquo;t that hard, especially if we use the right tools. For the past few years, I&amp;rsquo;ve been using borg as a tool for doing backup of all my computer-related data.</description>
+    </item>
+    
     <item>
       <title>Significance Test</title>
       <link>/posts/20220620-significance-test/</link>
@@ -14,7 +24,7 @@
       
       <guid>/posts/20220620-significance-test/</guid>
       <description>The main idea is we need to know whether this distribution is more likely to happen from another distribution with a level of p. So w need three things:
- The first distribution (base) and its parameter The second distribution (comparator) and its parameter A limit/threshold for which we could safely say this is different.  The Z - Test The T-test is for small use case ≤ 30, whereas the z-test is for the normal case.</description>
+The first distribution (base) and its parameter The second distribution (comparator) and its parameter A limit/threshold for which we could safely say this is different. The Z - Test The T-test is for small use case ≤ 30, whereas the z-test is for the normal case.</description>
     </item>
     
     <item>
@@ -53,7 +63,7 @@ But here is the thing: Sometimes when you are in a state of deep work, focusing 
       <guid>/posts/oldpost/linux-vpn-via-pptp-dari-terminal/</guid>
       <description>Sebagai salah satu cara untuk terhubung dengan resource yang ada di kantor ketika kita berada diluar (remote) adalah dengan menggunakan VPN. Ada beberapa jenis VPN, seperti openvpn dan pptp. Kali ini saya akan membahas proses koneksi VPN menggunakan PPTP di linux melalui command line.
 Langkahnya adalah :
- Memeriksa file yang dibutuhkan Membuat file konfigurasi Membuat koneksi Set default routing  1. Requirements Untuk dapat terhubung melalui VPN PPTP, ada 3 hal yang harus dimiliki, yakni:</description>
+Memeriksa file yang dibutuhkan Membuat file konfigurasi Membuat koneksi Set default routing 1. Requirements Untuk dapat terhubung melalui VPN PPTP, ada 3 hal yang harus dimiliki, yakni:</description>
     </item>
     
   </channel>

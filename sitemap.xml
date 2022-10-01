@@ -3,7 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <lastmod>2022-07-26T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/borg/</loc>
+    <lastmod>2022-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/posts/</loc>
+    <lastmod>2022-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/selfhosted/</loc>
+    <lastmod>2022-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/posts/20221001-backup-with-borgmatic/</loc>
+    <lastmod>2022-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2022-10-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/journal/</loc>
     <lastmod>2022-07-26T00:00:00+00:00</lastmod>
@@ -13,12 +28,6 @@
   </url><url>
     <loc>/project/03_journal_prompt/</loc>
     <lastmod>2022-07-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2022-07-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/posts/</loc>
-    <lastmod>2022-06-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/posts/20220620-significance-test/</loc>
     <lastmod>2022-06-20T00:00:00+00:00</lastmod>
@@ -36,9 +45,6 @@
     <lastmod>2022-06-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/posts/08-installing-libolm-from-source/</loc>
-    <lastmod>2021-11-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/selfhosted/</loc>
     <lastmod>2021-11-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/posts/shortcut_text/</loc>
