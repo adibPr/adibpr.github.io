@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
-	<meta name="generator" content="Hugo 0.102.3" />
+	<meta name="generator" content="Hugo 0.104.2" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-sccale=1">
   <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
@@ -9,17 +9,21 @@
   <link rel="stylesheet" type="text/css" href="./css/mine.css">
   
   
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
   <title>Adib.notes</title>
 
 </head>
 <body>
         <div class="container">
-          <div class="row">
-
-            <div id="lsidebar" class="col-2">
-            </div>
-
-            <div id="centerbar" class="col-8"><div id="mynav">
+            <div id="navigation"><div id="mynav">
   <ul class="nav justify-content-center">
     <li class="nav-item">
       <a class="nav-link active" href="./"><i data-feather="home"></i> Home </a>
@@ -35,7 +39,9 @@
     </li>
   </ul>
 </div>
-<br>
+</div>
+            <div id="lsidebar"></div>
+            <div id="main">
   <h1>Adib.notes</h1>
   
   
@@ -140,18 +146,15 @@
     </p>
   
   
-
-            </div>
-
-            <div id="rsidebar" class="col-2">
-            </div>
-
-          </div>
-        </div><script src="./js/jquery-3.min.js"></script>
+</div>
+            <div id="rsidebar"></div>
+            <div id="footer"><script src="./js/jquery-3.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/feather.min.js"></script>
 <script>
   feather.replace()
 </script>
-</body>
+</div>
+        </div>
+    </body>
 </html>
