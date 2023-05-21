@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-sccale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../../css/mine.css">
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+  <title>Adib.notes|AI Models that Runs Locally</title>
+
+</head>
+<body>
+        <div class="container">
+            <div id="navigation"><div id="mynav">
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="../../"><i data-feather="home"></i> Home </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../tags"><i data-feather="hash"></i> Tags </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../project"><i data-feather="code"></i> Project </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../about"><i data-feather="user"></i> About </a>
+    </li>
+  </ul>
+</div>
+</div>
+            <div id="lsidebar"></div>
+            <div id="main">
+  <center>
+    <h1>AI Models that Runs Locally</h1>
+    
+
+<time datetime="2023-05-21">May 21, 2023</time>
+
+
+    <br>
+    
+      
+        
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="tags/weekly-digest">weekly digest</a>
+      
+        
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="tags/deeplearning">deeplearning</a>
+      
+    
+  </center>
+  <br>
+
+  <div id="content">
+    <p>The rise of ChatGPT and other large language models is pretty fascinating in the past few months.</p>
+<p>New models are being published with larger model sizes and data, claiming to make an improvement from before.</p>
+<p>Apart from some serious debate on the potential danger of the technology, it surely opens new ways for us to do the things we used to do.</p>
+<p>Since some models are too expensive to run just for fun, I look and tried several models that could be run locally on my computer so I could build something interesting.</p>
+<h1 id="alpaca">Alpaca</h1>
+<p>The first one is the Large Language Model, similar to ChatGPT.
+This model is based on the Facebook LLM called <a href="https://ai.facebook.com/blog/large-language-model-llama-meta-ai/">LLaMA</a> that has been trained using 65 Billion parameters on 1.4 trillion data with a combination of <a href="https://crfm.stanford.edu/2023/03/13/alpaca.html">Standford Alpaca</a> to make it more instruction-following model.</p>
+<p>With models this size, surely it can&rsquo;t be used cheaply.
+Fortunately, some people make quantization of the inference process to reduce the model size, thus making it possible to be run on the local computer, even without GPU.</p>
+<p>The model I tried is from <a href="https://github.com/antimatter15/alpaca.cpp">Alpaca.cpp</a> which is the c/c++ port of the model.
+The Installation is quite staight forward like on the documentation:</p>
+<ol>
+<li>First, you clone the repo, and build the executable:</li>
+</ol>
+<pre tabindex="0"><code>git clone https://github.com/antimatter15/alpaca.cpp
+cd alpaca.cpp
+make chat
+</code></pre><ol start="2">
+<li>Download the binary from <a href="https://huggingface.co/Sosaka/Alpaca-native-4bit-ggml/blob/main/ggml-alpaca-7b-q4.bin">here</a> and put it in the same folder as the <code>chat</code> program (i.e using wget:</li>
+</ol>
+<pre tabindex="0"><code>wget -c https://huggingface.co/Sosaka/Alpaca-native-4bit-ggml/blob/main/ggml-alpaca-7b-q4.bin
+</code></pre><ol start="3">
+<li>Run the chat program, and try ask it something:</li>
+</ol>
+<pre tabindex="0"><code>./chat
+</code></pre><p><img src="https://bucket1.is3.cloudhost.id/blog/20230521%20Local%20AI/20230521-alpacca.png" alt="IMG"></p>
+<p>Example of output from Alpaca.</p>
+<h1 id="whisper">Whisper</h1>
+<p><a href="https://openai.com/research/whisper">Whisper</a> is a speech recognition model from OpenAI that trains on 680,000 hours of audio. It claimed to have produced a model that approaches human-level robustness and accuracy in English speech.
+OpenAI open-sourcing this model on the <a href="https://github.com/openai/whisper">github</a>, but I haven&rsquo;t tested it yet.</p>
+<p>What I tried is the <a href="https://github.com/ggerganov/whisper.cpp">Whisper.cpp</a> which again, is the C++ port of the models and is quantized so it could run cheaply on the local computer.</p>
+<p>The installation is also easy:</p>
+<ol>
+<li>Clone the repository</li>
+</ol>
+<pre tabindex="0"><code>git clone https://github.com/ggerganov/whisper.cpp
+cd whisper.cpp
+</code></pre><ol start="2">
+<li>Download the base model (or any supported models). Fortunately, the project provides a script to download the necessary model:</li>
+</ol>
+<pre tabindex="0"><code>bash ./models/download-ggml-model.sh base.en
+</code></pre><ol start="3">
+<li>Build the program:
+<code>make</code></li>
+<li>And the test run it using the sample audio:</li>
+</ol>
+<pre tabindex="0"><code>./main -f samples/jfk.wav
+</code></pre><p>I&rsquo;ve tried it with several audios, and so far the result is fascinating.
+The next thing I want to try is to run it with input directly from the Microphone, so we could send commands to the computer via voice.</p>
+<h3 id="tts-text-to-speech">TTS: Text To Speech</h3>
+<p>Lastly, what I tried this week is text to speech model. First, I came to <a href="https://github.com/espeak-ng/espeak-ng">espeak-ng</a> tools but the result isn&rsquo;t that great.
+After further looking, I came across <a href="https://github.com/mozilla/TTS">Mozilla TTS</a> that I found quite fascinating.
+The usage and installation are easy, and the result (even the default voice) is extraordinary.</p>
+<p>To install it, we could use pip:</p>
+<pre tabindex="0"><code>pip install TTS
+</code></pre><p>And then test it by running:</p>
+<pre tabindex="0"><code>tts --text &#34;Hello World&#34;
+</code></pre><p>For the first time, it will download the default voice model. We could list the available voice by using the <code>--list_models parameter</code>. To change voice, use  <code>--model_name &quot;&lt;type&gt;/&lt;language&gt;/&lt;dataset&gt;/&lt;model_name&gt;&quot;</code>, it will try to download the model for the first time.</p>
+<p>I&rsquo;m currently looking for image generative model that could be run locally, like Stable Diffusion that could complete my tools.
+Using this, I think we could try to create a smart voice assitant of our own.</p>
+
+  </div>
+
+</div>
+            <div id="rsidebar"></div>
+            <div id="footer"><script src="../../js/jquery-3.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/feather.min.js"></script>
+<script>
+  feather.replace()
+</script>
+</div>
+        </div>
+    </body>
+</html>

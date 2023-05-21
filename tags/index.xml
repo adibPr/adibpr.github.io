@@ -6,7 +6,25 @@
     <description>Recent content in Tags on Adib.notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>deeplearning</title>
+      <link>/tags/deeplearning/</link>
+      <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/deeplearning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>weekly digest</title>
+      <link>/tags/weekly-digest/</link>
+      <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/weekly-digest/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>borg</title>
       <link>/tags/borg/</link>
@@ -49,15 +67,6 @@
       <pubDate>Mon, 20 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>/tags/statistics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>weekly digest</title>
-      <link>/tags/weekly-digest/</link>
-      <pubDate>Mon, 20 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/weekly-digest/</guid>
       <description></description>
     </item>
     

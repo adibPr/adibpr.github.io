@@ -3,21 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <lastmod>2022-10-01T00:00:00+00:00</lastmod>
+    <lastmod>2023-05-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/borg/</loc>
-    <lastmod>2022-10-01T00:00:00+00:00</lastmod>
+    <loc>/posts/20230521-local-ai/</loc>
+    <lastmod>2023-05-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/deeplearning/</loc>
+    <lastmod>2023-05-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/posts/</loc>
+    <lastmod>2023-05-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2023-05-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/weekly-digest/</loc>
+    <lastmod>2023-05-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/borg/</loc>
     <lastmod>2022-10-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/selfhosted/</loc>
     <lastmod>2022-10-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/posts/20221001-backup-with-borgmatic/</loc>
-    <lastmod>2022-10-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2022-10-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/journal/</loc>
@@ -33,9 +42,6 @@
     <lastmod>2022-06-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/statistics/</loc>
-    <lastmod>2022-06-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/weekly-digest/</loc>
     <lastmod>2022-06-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/posts/20220602-get-modified-files-within-two-snapshot/</loc>
