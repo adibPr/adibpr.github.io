@@ -6,13 +6,33 @@
     <description>Recent content on Adib.notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Neo4J Graph Summit 2023</title>
+      <link>/posts/20230613-neo4j-graph-summit/</link>
+      <pubDate>Tue, 13 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/20230613-neo4j-graph-summit/</guid>
+      <description>Last week I got the chance to attend Graph Summit 2023 Jakarta, organized by neo4j. This event discusses the power of the graph database compared to a traditional relational database in terms of complex relations and data queries.
+There are also several presentations regarding the real-world use case from different speakers.
+Influencer Taxes One that is memorable for me is from Mr. Iwan Djuniardi about how the Directorate General of Taxes Indonesia tries to use Graph database to detect potential income of internet influencer, and thus calculating the tax.</description>
+    </item>
+    
     <item>
       <title>Producer and Consumer</title>
       <link>/posts/20230525-input-output/</link>
       <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
       
       <guid>/posts/20230525-input-output/</guid>
+      <description>I used to learn something by passively consuming it. Be it by watching a video course, reading a book/article, or looking into tutorials. Most of the time, the knowledge will be lost as soon as I move to learn another thing. So now, I&amp;rsquo;m trying a new thing. Whenever I want to learn something, I must produce something. So instead of passively consuming, I need to actively produce as well.</description>
+    </item>
+    
+    <item>
+      <title>Producer and Consumer</title>
+      <link>/posts/20230613-input-output/</link>
+      <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/20230613-input-output/</guid>
       <description>I used to learn something by passively consuming it. Be it by watching a video course, reading a book/article, or looking into tutorials. Most of the time, the knowledge will be lost as soon as I move to learn another thing. So now, I&amp;rsquo;m trying a new thing. Whenever I want to learn something, I must produce something. So instead of passively consuming, I need to actively produce as well.</description>
     </item>
     
