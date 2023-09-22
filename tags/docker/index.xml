@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on Adib.notes</title>
+    <link>/tags/docker/</link>
+    <description>Recent content in docker on Adib.notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building Python Layer for AWS Lambda with Docker</title>
+      <link>/posts/20230922-python-aws-layer/</link>
+      <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/20230922-python-aws-layer/</guid>
+      <description>The other day, I was building something with AWS Lambda that requires an additional package. Usually, AWS has provided some scientific packages such as scikit-learn and pandas as a Layer that is ready to use. Unfortunately, one of the packages that I need (seaborn) isn&amp;rsquo;t available yet, so in order to use it in my function, I need to create a Layer manually.
+Usually, this is pretty straightforward, all you need to do is to install the package inside a folder and zip it.</description>
+    </item>
+    
+  </channel>
+</rss>

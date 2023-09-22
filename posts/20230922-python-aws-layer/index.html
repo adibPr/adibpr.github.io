@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-sccale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../../css/mine.css">
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+  <title>Adib.notes|Building Python Layer for AWS Lambda with Docker</title>
+
+</head>
+<body>
+        <div class="container">
+            <div id="navigation"><div id="mynav">
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="../../"><i data-feather="home"></i> Home </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../tags"><i data-feather="hash"></i> Tags </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../project"><i data-feather="code"></i> Project </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../about"><i data-feather="user"></i> About </a>
+    </li>
+  </ul>
+</div>
+</div>
+            <div id="lsidebar"></div>
+            <div id="main">
+  <center>
+    <h1>Building Python Layer for AWS Lambda with Docker</h1>
+    
+
+<time datetime="2023-09-22">Sep 22, 2023</time>
+
+
+    <br>
+    
+      
+        
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="tags/python">python</a>
+      
+        
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="tags/aws">aws</a>
+      
+        
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="tags/docker">docker</a>
+      
+    
+  </center>
+  <br>
+
+  <div id="content">
+    <p>The other day, I was building something with <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> that requires an additional package.
+Usually, AWS has provided some scientific packages such as <a href="https://scikit-learn.org/">scikit-learn</a> and <a href="https://pandas.pydata.org/">pandas</a> as a Layer that is ready to use.
+Unfortunately, one of the packages that I need (<a href="https://seaborn.pydata.org/">seaborn</a>) isn&rsquo;t available yet, so in order to use it in my function, I need to create a Layer manually.</p>
+<p>Usually, this is pretty straightforward, all you need to do is to install the package inside a folder and zip it. The command to run it:</p>
+<p><code>pip install -r requirements.txt -t python/</code></p>
+<p>This command will install the package listed in the <code>requirements.txt</code> file into a folder <code>python</code>.
+Then, you could zip this folder and upload it as an AWS Layer.</p>
+<p>However, I happen to be using a MacBook Air with M1 Processor. In some cases, when installing something from a source, the AWS Lambda failed to use it due to incompatibility of the processor type.
+To handle this, I create a docker container with x86 architecture that will do the installing and zipping for me, and then I upload it to the final file to AWS.
+So far the result is good, all I need to do is change the <code>requirements.txt</code> to what package I want to install, run the docker, copy the zip to my local machine, and upload it.</p>
+<p>The Dockerfile configuration I ended up is:</p>
+<pre tabindex="0"><code>FROM amd64/python:3.7.17-bookworm
+
+WORKDIR /usr/src/app
+COPY requirements.txt ./
+RUN apt update
+RUN apt install -y zip
+RUN mkdir -p ./python
+RUN pip install -r requirements.txt -t python/
+RUN zip -r python.zip python
+
+ENTRYPOINT [&#34;tail&#34;, &#34;-f&#34;, &#34;/dev/null&#34;]
+</code></pre><p>You can find the whole code and the bash script to run it can be found in my <a href="https://app.pradib.my.id/gitea/adib/python_aws_layer">git</a>.</p>
+
+  </div>
+
+</div>
+            <div id="rsidebar"></div>
+            <div id="footer"><script src="../../js/jquery-3.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/feather.min.js"></script>
+<script>
+  feather.replace()
+</script>
+</div>
+        </div>
+    </body>
+</html>
