@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>talks on Adib.notes</title>
+    <link>/tags/talks/</link>
+    <description>Recent content in talks on Adib.notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/talks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RFM Segmentation for Finding The Best Customer</title>
+      <link>/project/231014_talks_rfm_segment/</link>
+      <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/project/231014_talks_rfm_segment/</guid>
+      <description>I talked about basic customer segmentation using RFM and clustering approach to find big spender customer, and how we deal with different type of customer. Slides can be found here</description>
+    </item>
+    
+    <item>
+      <title>Data Visualization</title>
+      <link>/project/231014_talks_dataviz/</link>
+      <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/project/231014_talks_dataviz/</guid>
+      <description>I talked about basic data visualization, tips and technique. No recording published, but you can find the slides here.</description>
+    </item>
+    
+    <item>
+      <title>Computer Vision for Vehicle Detection</title>
+      <link>/project/231014_talks_bisaai_vehicle/</link>
+      <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/project/231014_talks_bisaai_vehicle/</guid>
+      <description>My talk about basic computer vision techniques to detect vehicle from a camera installed at the road. The full talk can be watched on Here</description>
+    </item>
+    
+  </channel>
+</rss>

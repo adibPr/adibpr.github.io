@@ -71,6 +71,33 @@
     </item>
     
     <item>
+      <title>clustering</title>
+      <link>/tags/clustering/</link>
+      <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/clustering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rfm</title>
+      <link>/tags/rfm/</link>
+      <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/rfm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>talks</title>
+      <link>/tags/talks/</link>
+      <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/talks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>borg</title>
       <link>/tags/borg/</link>
       <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
@@ -116,11 +143,29 @@
     </item>
     
     <item>
+      <title>dataviz</title>
+      <link>/tags/dataviz/</link>
+      <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/dataviz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>s3</title>
       <link>/tags/s3/</link>
       <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>/tags/s3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>computer vision</title>
+      <link>/tags/computer-vision/</link>
+      <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/computer-vision/</guid>
       <description></description>
     </item>
     

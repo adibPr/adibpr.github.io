@@ -44,6 +44,18 @@
     <loc>/tags/weekly-digest/</loc>
     <lastmod>2023-05-21T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tags/clustering/</loc>
+    <lastmod>2023-04-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/rfm/</loc>
+    <lastmod>2023-04-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/project/231014_talks_rfm_segment/</loc>
+    <lastmod>2023-04-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/talks/</loc>
+    <lastmod>2023-04-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/borg/</loc>
     <lastmod>2022-10-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -71,6 +83,12 @@
     <loc>/posts/20220602-get-modified-files-within-two-snapshot/</loc>
     <lastmod>2022-06-02T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/project/231014_talks_dataviz/</loc>
+    <lastmod>2021-12-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/dataviz/</loc>
+    <lastmod>2021-12-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/posts/08-installing-libolm-from-source/</loc>
     <lastmod>2021-11-09T00:00:00+00:00</lastmod>
   </url><url>
@@ -85,6 +103,12 @@
   </url><url>
     <loc>/project/01_site/</loc>
     <lastmod>2020-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/computer-vision/</loc>
+    <lastmod>2020-06-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/project/231014_talks_bisaai_vehicle/</loc>
+    <lastmod>2020-06-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/about/</loc>
     <lastmod>2019-11-29T00:00:00+00:00</lastmod>
