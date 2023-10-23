@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>telco on Adib.notes</title>
+    <link>/tags/telco/</link>
+    <description>Recent content in telco on Adib.notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/telco/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leveraging Telco Data Beyond Traditional Telco Business</title>
+      <link>/project/231023_talks_thrive_dsi/</link>
+      <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/project/231023_talks_thrive_dsi/</guid>
+      <description>This is a collaborative event from Thrive of Telkomsel with Data Science Indonesia. In this session, I talked about how we (INDICO) leverage telco data beyond traditional telco business. We explore the benefits of telco data, what it might contains, and what kind of potential application it can do to your business.</description>
+    </item>
+    
+  </channel>
+</rss>
