@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-sccale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-grid.min.css" integrity="sha512-ZuRTqfQ3jNAKvJskDAU/hxbX1w25g41bANOVd1Co6GahIe2XjM6uVZ9dh0Nt3KFCOA061amfF2VeL60aJXdwwQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-reboot.min.css" integrity="sha512-ZHQv/ue+hZQ+Jd+JKhxic17TUraZ9UwS6G7RcwSrQEE9j/m/AGRwj1OmYrkP43H0B/Wf0pg3hfbHCMAS6SGHOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="../../css/mine.css">
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+  <script src="../../js/theme.js"></script>
+  <title>Adib.notes|Cohort Analysis With Python</title>
+
+</head>
+<body>
+        <div class="containers">
+            <div id="navigation"><div id="mynav">
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="../../"><i data-feather="home"></i> Home </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../tags"><i data-feather="hash"></i> Tags </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../project"><i data-feather="code"></i> Project & Talks <i data-feather="coffee"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../about"><i data-feather="user"></i> About </a>
+    </li>
+  </ul>
+</div>
+</div>
+            <div id="lsidebar"></div>
+            <div id="main">
+  <center>
+    <h1>Cohort Analysis With Python</h1>
+    
+
+<time datetime="2023-11-20">Nov 20, 2023</time>
+
+
+    <br>
+    
+      
+        
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="tags/python">python</a>
+      
+        
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="tags/data-analysis">data analysis</a>
+      
+    
+  </center>
+  <br>
+
+  <div id="content">
+    <p><img src="https://bucket1.is3.cloudhost.id/blog/20231113_cohort/Leonardo_Diffusion_XL_Several_data_analysis_looking_at_cohort_0.jpg" alt="Ilustration generated with Leonardo AI"></p>
+<p>Cohort analysis is one of the simple and effective tool to better understand how customer interact in business.
+We can look whether the customer are coming back, or whether their value are improved over time.
+A simple tools that should be on every data analytics toolbox. But first, what is a cohort?</p>
+<h1 id="what-is-cohort">What is cohort?</h1>
+<p>The technical definition of cohort analysis is behavioral analytics that breaks data into relevant groups and observes how their behavior changes over time.
+For example, a company might group their user based on their first registration, and observe how their interaction with the platform changes day, week, or month.</p>
+<p>Usually, cohorts are displayed in a table format, with each row representing a different user group and a column representing time.
+For example, consider the cohort table of user purchase/transaction below.</p>
+<p><img src="https://bucket1.is3.cloudhost.id/blog/20231113_cohort/cohort.png" alt="Cohort example"></p>
+<p>Based on the number of rows, we have 13 groups representing users who first purchased at different months. The first groups (i.e. the first row) are the users that joined (have their first transaction) in December 2010. The second group is from January 2011, and so on.</p>
+<p>Moving on to the column, the first column represents the percentage of users that still have transactions within the next month after they first purchase. So based on the data above, 38% of users that had their first transaction in December 2010 also had transactions in January 2011.</p>
+<p>By looking at this, we can see the pattern for our users’ behavior, for example, whether they tend to come back to our platform a few months after they register, or whether there are a special occasion that makes certain month has higher recurring user compared to other month.</p>
+<h1 id="creating-cohort">Creating Cohort</h1>
+<p>We know how valuable a cohort is, the question is how do we make one? For this demo, we will use data from <a href="https://archive.ics.uci.edu/dataset/352/online+retail">https://archive.ics.uci.edu/dataset/352/online+retail</a>.</p>
+<p>This data consists of transactions for an online retailer that includes price and customer ID. The cohort that we will create will be a monthly transaction cohort.</p>
+<p>For a cohort, what we need generally falls into three steps:</p>
+<ol>
+<li>Get the <strong>cohort group</strong> for each customer. Since we are building a monthly transaction cohort, the cohort group will be the month of the first transaction from each customer. So if a customer makes a transaction on Nov 2019, Oct 2019, and Dec 2019, their base month will be Nov 2019.</li>
+<li>The <strong>step</strong> of the cohort, which will be the difference between the transaction month and each customer base date. So if a base month for a customer is Nov 2019, then his transaction in Oct 2019 will be categorized as Step 1, the transaction in Nov 2019 will be Step 2.</li>
+<li><strong>Pivot</strong> the data, based on the base month as the row and the step as the column.</li>
+</ol>
+<h1 id="using-python">Using Python</h1>
+<p>Using Python, after we load the data and remove duplicates, we first create an additional column for storing month-only information.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#f92672">...</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;Month&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;InvoiceDate&#39;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>to_period(<span style="color:#e6db74">&#39;M&#39;</span>)
+</span></span></code></pre></div><p>Then we will use <code>groupby</code> along with <code>transform</code> to get the minimum month of each customer. Unlike other normal aggregations, the function will result in a column with the same shape as the inputted DataFrame, with the same group will have the same value.</p>
+<p>After having this information, to calculate the step, we could simply subtract the month.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;FirstMonth&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;CustomerID&#39;</span>)[<span style="color:#e6db74">&#39;Month&#39;</span>]<span style="color:#f92672">.</span>transform(<span style="color:#e6db74">&#39;min&#39;</span>)
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;DiffMonth&#39;</span>] <span style="color:#f92672">=</span> (df[<span style="color:#e6db74">&#39;Month&#39;</span>]<span style="color:#f92672">-</span> df[<span style="color:#e6db74">&#39;FirstMonth&#39;</span>])<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: x<span style="color:#f92672">.</span>n)
+</span></span></code></pre></div><p>Next, we will aggregate per base group, to count the total unique user and convert the transaction number into percentage.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># aggregate per base and step</span>
+</span></span><span style="display:flex;"><span>df_agg <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>groupby([<span style="color:#e6db74">&#39;FirstMonth&#39;</span>, <span style="color:#e6db74">&#39;Month&#39;</span>, <span style="color:#e6db74">&#39;DiffMonth&#39;</span>])<span style="color:#f92672">.</span>agg(
+</span></span><span style="display:flex;"><span>    total_customers<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;CustomerID&#39;</span>, <span style="color:#e6db74">&#39;nunique&#39;</span>)
+</span></span><span style="display:flex;"><span>)<span style="color:#f92672">.</span>reset_index()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># get percentage</span>
+</span></span><span style="display:flex;"><span>df_agg[<span style="color:#e6db74">&#39;perc_customer&#39;</span>] <span style="color:#f92672">=</span> df_agg[<span style="color:#e6db74">&#39;total_customers&#39;</span>] <span style="color:#f92672">/</span> \
+</span></span><span style="display:flex;"><span>    df_agg<span style="color:#f92672">.</span>sort_values([<span style="color:#e6db74">&#39;FirstMonth&#39;</span>, <span style="color:#e6db74">&#39;Month&#39;</span>])\
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">.</span>groupby([<span style="color:#e6db74">&#39;FirstMonth&#39;</span>])[<span style="color:#e6db74">&#39;total_customers&#39;</span>]\
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">.</span>transform(<span style="color:#e6db74">&#39;first&#39;</span>)
+</span></span></code></pre></div><p>Finally, we can pivot this table, and then plot it using our visualization tools of choice.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df_pivot <span style="color:#f92672">=</span> df_agg<span style="color:#f92672">.</span>pivot_table(
+</span></span><span style="display:flex;"><span> index<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;FirstMonth&#39;</span>, 
+</span></span><span style="display:flex;"><span> columns<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;DiffMonth&#39;</span>, 
+</span></span><span style="display:flex;"><span> values<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;perc_customer&#39;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> seaborn <span style="color:#66d9ef">as</span> sns
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>f, ax <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>heatmap(
+</span></span><span style="display:flex;"><span>    df_pivot, 
+</span></span><span style="display:flex;"><span>    ax<span style="color:#f92672">=</span>ax, 
+</span></span><span style="display:flex;"><span>    annot<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, 
+</span></span><span style="display:flex;"><span>    fmt<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;.0%&#39;</span>, 
+</span></span><span style="display:flex;"><span>    cmap<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;GnBu&#39;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><h1 id="using-sql">Using SQL</h1>
+<p>The same step could be also applied when we are using SQL. What might be different is the way we get the information for each step.</p>
+<p>First, To get the base month of each user, we could use the partition function <code>first_value</code>. In SQLite, we could use:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> first_value(InvoiceDate) over (partition <span style="color:#66d9ef">by</span> CustomerID <span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> InvoiceDate) <span style="color:#66d9ef">as</span> FirstInvoiceDate 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> <span style="color:#66d9ef">TABLE</span>
+</span></span></code></pre></div><p>Second, For the step or month difference, since each SQL flavor might not have the right function, we could use simple arithmetic to convert the date into the total month (<code>12*year+month</code>) using <code>strftime</code>, and make the calculation based on that.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span>
+</span></span><span style="display:flex;"><span> strftime(<span style="color:#e6db74">&#39;%Y&#39;</span>, InvoiceDate) <span style="color:#f92672">*</span> <span style="color:#ae81ff">12</span> <span style="color:#f92672">+</span> strftime(<span style="color:#e6db74">&#39;%m&#39;</span>, InvoiceDate)) 
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">-</span> (strftime(<span style="color:#e6db74">&#39;%Y&#39;</span>, FirstInvoiceDate) <span style="color:#f92672">*</span> <span style="color:#ae81ff">12</span> <span style="color:#f92672">+</span> strftime(<span style="color:#e6db74">&#39;%m&#39;</span>, FirstInvoiceDate))
+</span></span></code></pre></div><p>Finally, for the pivot and plotting function, it depends on the BI tools we use. When working with <a href="https://superset.apache.org/">Superset</a>, we could create a chart called Pivot Table to display our cohort. Different BI might have different ways to do Pivot. Some even have their own cohort chart, so make sure to check the documentation first.</p>
+<p><img src="https://bucket1.is3.cloudhost.id/blog/20231113_cohort/cohort_superset.png" alt="Cohort in Superset"></p>
+<h1 id="analysis">Analysis</h1>
+<p>So, given the cohort as above, what insight we could have? The most obvious information that we can look from it is the retention rate from each cohort group. Based on the data, only around 20–30% of customers make a repeat transaction after their first month. There are also some quite significant difference on several cohort group, with March to August having on average, a lower retention rate compare to overall median.</p>
+<p>Another possible analysis that we can do is to make cohort based on customer average transaction value instead of the total transaction. This could be as a proxy to a customer lifetime value (CLTV) metrics, and shows whether the customer value for each cohort is going up on each month or not.</p>
+<p>We could also look for the effect of our product change using this cohort. If for example, we change our website to be faster in March, and we could see that the next month transaction is significantly higher that the previous one (and assuming no other possible causation exists, such as monthly trend), then we can assume this changed is caused by our change.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>As a tools, cohort analysis is an easy but powerful way to get better understanding about our customer and business. This technique can provide insights into user behavior and outcomes that can aid your business growth.</p>
+
+  </div>
+
+</div>
+            <div id="rsidebar"></div>
+            <div id="theme"> 
+                <a href="#" class="nav-link" onclick="changeTheme()"><i data-feather="sun"></i></a>
+            </div>
+            <div id="footer"><script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.1/feather.min.js" integrity="sha512-4lykFR6C2W55I60sYddEGjieC2fU79R7GUtaqr3DzmNbo0vSaO1MfUjMoTFYYuedjfEix6uV9jVTtRCSBU/Xiw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  feather.replace()
+</script>
+</div>
+        </div>
+    </body>
+</html>
