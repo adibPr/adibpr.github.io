@@ -6,16 +6,21 @@
     <description>Recent content in data analysis on Adib.notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/data-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/data-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Minimum Actionable Insight: Providing Value as a Data Scientist</title>
+      <link>/posts/20240120-hierarchy-of-needs/</link>
+      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>/posts/20240120-hierarchy-of-needs/</guid>
+      <description>I want to start by stating something not so obvious: not all company needs to add AI to their current business. When we consider the data science hierarchy of needs, AI utilization is placed at the top of the hierarchy, meaning its value will be visible if the other needs below it are accommodated (except of course when AI is the core business). This is true especially if our company is just getting started, or still trying to gain traction.</description>
+    </item>
     <item>
       <title>Cohort Analysis With Python</title>
       <link>/posts/20231120-cohort-analysis/</link>
       <pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>/posts/20231120-cohort-analysis/</guid>
-      <description>Cohort analysis is one of the simple and effective tool to better understand how customer interact in business. We can look whether the customer are coming back, or whether their value are improved over time. A simple tools that should be on every data analytics toolbox. But first, what is a cohort?
-What is cohort? The technical definition of cohort analysis is behavioral analytics that breaks data into relevant groups and observes how their behavior changes over time.</description>
+      <description>Cohort analysis is one of the simple and effective tool to better understand how customer interact in business. We can look whether the customer are coming back, or whether their value are improved over time. A simple tools that should be on every data analytics toolbox. But first, what is a cohort?&#xA;What is cohort? The technical definition of cohort analysis is behavioral analytics that breaks data into relevant groups and observes how their behavior changes over time.</description>
     </item>
-    
   </channel>
 </rss>

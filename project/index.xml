@@ -6,70 +6,56 @@
     <description>Recent content in My Project on Adib.notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Leveraging Telco Data Beyond Traditional Telco Business</title>
       <link>/project/231023_talks_thrive_dsi/</link>
       <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>/project/231023_talks_thrive_dsi/</guid>
       <description>This is a collaborative event from Thrive of Telkomsel with Data Science Indonesia. In this session, I talked about how we (INDICO) leverage telco data beyond traditional telco business. We explore the benefits of telco data, what it might contains, and what kind of potential application it can do to your business.</description>
     </item>
-    
     <item>
       <title>RFM Segmentation for Finding The Best Customer</title>
       <link>/project/231014_talks_rfm_segment/</link>
       <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>/project/231014_talks_rfm_segment/</guid>
       <description>I talked about basic customer segmentation using RFM and clustering approach to find big spender customer, and how we deal with different type of customer. Slides can be found here</description>
     </item>
-    
     <item>
       <title>Simple Daily Journal Prompt</title>
       <link>/project/03_journal_prompt/</link>
       <pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate>
-      
       <guid>/project/03_journal_prompt/</guid>
-      <description>Over the past few years, I&amp;rsquo;ve developed a daily writing habit in my note-taking apps (I&amp;rsquo;m currently using Notion, having migrated from Evernote a few months ago). At first, I just write my daily feeling, what negative or positive emotions I currently feel, and the source of them. It helps me meditate on my life. Sometimes I even come up with a good quote or self-advice.
-But writing about feeling alone might be boring sometimes, so I started to look for something different.</description>
+      <description>Over the past few years, I&amp;rsquo;ve developed a daily writing habit in my note-taking apps (I&amp;rsquo;m currently using Notion, having migrated from Evernote a few months ago). At first, I just write my daily feeling, what negative or positive emotions I currently feel, and the source of them. It helps me meditate on my life. Sometimes I even come up with a good quote or self-advice.&#xA;But writing about feeling alone might be boring sometimes, so I started to look for something different.</description>
     </item>
-    
     <item>
       <title>Data Visualization</title>
       <link>/project/231014_talks_dataviz/</link>
       <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>/project/231014_talks_dataviz/</guid>
       <description>I talked about basic data visualization, tips and technique. No recording published, but you can find the slides here.</description>
     </item>
-    
     <item>
       <title>A Jupyter notebook - S3 Blogging Platform</title>
       <link>/project/02_jupyter_gdrive/</link>
       <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>/project/02_jupyter_gdrive/</guid>
       <description>Markdown is a good format to write almost anything. But we as a data scientist, use Jupyter Notebook, a lot. We could do a very rapid experiment, with plot, data frame, etc. This makes me wonder, is it possible to turn a jupyter notes into a blog post? I actually try to do this at my current company, to create some sort of knowledge management platform for our research team.</description>
     </item>
-    
     <item>
       <title>My Simple Hugo Theme </title>
       <link>/project/01_site/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>/project/01_site/</guid>
       <description>This website is built using hand crafted theme as a medium for me to learn Hugo theming. It&amp;rsquo;s not that beauty since I&amp;rsquo;m not a web developer, but I&amp;rsquo;ve learned so much about hugo and CSS/HTML in general. You can find the code in here.</description>
     </item>
-    
     <item>
       <title>Computer Vision for Vehicle Detection</title>
       <link>/project/231014_talks_bisaai_vehicle/</link>
       <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
-      
       <guid>/project/231014_talks_bisaai_vehicle/</guid>
       <description>My talk about basic computer vision techniques to detect vehicle from a camera installed at the road. The full talk can be watched on Here</description>
     </item>
-    
   </channel>
 </rss>

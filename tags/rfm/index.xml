@@ -6,15 +6,14 @@
     <description>Recent content in rfm on Adib.notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/rfm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/rfm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>RFM Segmentation for Finding The Best Customer</title>
       <link>/project/231014_talks_rfm_segment/</link>
       <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>/project/231014_talks_rfm_segment/</guid>
       <description>I talked about basic customer segmentation using RFM and clustering approach to find big spender customer, and how we deal with different type of customer. Slides can be found here</description>
     </item>
-    
   </channel>
 </rss>

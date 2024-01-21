@@ -6,192 +6,147 @@
     <description>Recent content on Adib.notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Minimum Actionable Insight: Providing Value as a Data Scientist</title>
+      <link>/posts/20240120-hierarchy-of-needs/</link>
+      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>/posts/20240120-hierarchy-of-needs/</guid>
+      <description>I want to start by stating something not so obvious: not all company needs to add AI to their current business. When we consider the data science hierarchy of needs, AI utilization is placed at the top of the hierarchy, meaning its value will be visible if the other needs below it are accommodated (except of course when AI is the core business). This is true especially if our company is just getting started, or still trying to gain traction.</description>
+    </item>
     <item>
       <title>Cohort Analysis With Python</title>
       <link>/posts/20231120-cohort-analysis/</link>
       <pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>/posts/20231120-cohort-analysis/</guid>
-      <description>Cohort analysis is one of the simple and effective tool to better understand how customer interact in business. We can look whether the customer are coming back, or whether their value are improved over time. A simple tools that should be on every data analytics toolbox. But first, what is a cohort?
-What is cohort? The technical definition of cohort analysis is behavioral analytics that breaks data into relevant groups and observes how their behavior changes over time.</description>
+      <description>Cohort analysis is one of the simple and effective tool to better understand how customer interact in business. We can look whether the customer are coming back, or whether their value are improved over time. A simple tools that should be on every data analytics toolbox. But first, what is a cohort?&#xA;What is cohort? The technical definition of cohort analysis is behavioral analytics that breaks data into relevant groups and observes how their behavior changes over time.</description>
     </item>
-    
     <item>
       <title>Leveraging Telco Data Beyond Traditional Telco Business</title>
       <link>/project/231023_talks_thrive_dsi/</link>
       <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>/project/231023_talks_thrive_dsi/</guid>
       <description>This is a collaborative event from Thrive of Telkomsel with Data Science Indonesia. In this session, I talked about how we (INDICO) leverage telco data beyond traditional telco business. We explore the benefits of telco data, what it might contains, and what kind of potential application it can do to your business.</description>
     </item>
-    
     <item>
       <title>Building Python Layer for AWS Lambda with Docker</title>
       <link>/posts/20230922-python-aws-layer/</link>
       <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>/posts/20230922-python-aws-layer/</guid>
-      <description>The other day, I was building something with AWS Lambda that requires an additional package. Usually, AWS has provided some scientific packages such as scikit-learn and pandas as a Layer that is ready to use. Unfortunately, one of the packages that I need (seaborn) isn&amp;rsquo;t available yet, so in order to use it in my function, I need to create a Layer manually.
-Usually, this is pretty straightforward, all you need to do is to install the package inside a folder and zip it.</description>
+      <description>The other day, I was building something with AWS Lambda that requires an additional package. Usually, AWS has provided some scientific packages such as scikit-learn and pandas as a Layer that is ready to use. Unfortunately, one of the packages that I need (seaborn) isn&amp;rsquo;t available yet, so in order to use it in my function, I need to create a Layer manually.&#xA;Usually, this is pretty straightforward, all you need to do is to install the package inside a folder and zip it.</description>
     </item>
-    
     <item>
       <title>Neo4J Graph Summit 2023</title>
       <link>/posts/20230613-neo4j-graph-summit/</link>
       <pubDate>Tue, 13 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>/posts/20230613-neo4j-graph-summit/</guid>
-      <description>Last week I got the chance to attend Graph Summit 2023 Jakarta, organized by neo4j. This event discusses the power of the graph database compared to a traditional relational database in terms of complex relations and data queries.
-There are also several presentations regarding the real-world use case from different speakers.
-Influencer Taxes One that is memorable for me is from Mr. Iwan Djuniardi about how the Directorate General of Taxes Indonesia tries to use Graph database to detect potential income of internet influencer, and thus calculating the tax.</description>
+      <description>Last week I got the chance to attend Graph Summit 2023 Jakarta, organized by neo4j. This event discusses the power of the graph database compared to a traditional relational database in terms of complex relations and data queries.&#xA;There are also several presentations regarding the real-world use case from different speakers.&#xA;Influencer Taxes One that is memorable for me is from Mr. Iwan Djuniardi about how the Directorate General of Taxes Indonesia tries to use Graph database to detect potential income of internet influencer, and thus calculating the tax.</description>
     </item>
-    
     <item>
       <title>Producer and Consumer</title>
       <link>/posts/20230613-input-output/</link>
       <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>/posts/20230613-input-output/</guid>
       <description>I used to learn something by passively consuming it. Be it by watching a video course, reading a book/article, or looking into tutorials. Most of the time, the knowledge will be lost as soon as I move to learn another thing. So now, I&amp;rsquo;m trying a new thing. Whenever I want to learn something, I must produce something. So instead of passively consuming, I need to actively produce as well.</description>
     </item>
-    
     <item>
       <title>AI Models that Runs Locally</title>
       <link>/posts/20230521-local-ai/</link>
       <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>/posts/20230521-local-ai/</guid>
-      <description>The rise of ChatGPT and other large language models is pretty fascinating in the past few months.
-New models are being published with larger model sizes and data, claiming to make an improvement from before.
-Apart from some serious debate on the potential danger of the technology, it surely opens new ways for us to do the things we used to do.
-Since some models are too expensive to run just for fun, I look and tried several models that could be run locally on my computer so I could build something interesting.</description>
+      <description>The rise of ChatGPT and other large language models is pretty fascinating in the past few months.&#xA;New models are being published with larger model sizes and data, claiming to make an improvement from before.&#xA;Apart from some serious debate on the potential danger of the technology, it surely opens new ways for us to do the things we used to do.&#xA;Since some models are too expensive to run just for fun, I look and tried several models that could be run locally on my computer so I could build something interesting.</description>
     </item>
-    
     <item>
       <title>RFM Segmentation for Finding The Best Customer</title>
       <link>/project/231014_talks_rfm_segment/</link>
       <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>/project/231014_talks_rfm_segment/</guid>
       <description>I talked about basic customer segmentation using RFM and clustering approach to find big spender customer, and how we deal with different type of customer. Slides can be found here</description>
     </item>
-    
     <item>
       <title>Simple Backup with Borgmatic</title>
       <link>/posts/20221001-backup-with-borgmatic/</link>
       <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>/posts/20221001-backup-with-borgmatic/</guid>
-      <description>I&amp;rsquo;m a self-hosted person, I own a VPS and have installed some applications that I use in my day-to-day activities. Those apps (like chat server, using Matrix) are becoming a part of my life, and losing the data that&amp;rsquo;s been there will be disastrous for me. Hence, backup is a must thing to do.
-Doing backup isn&amp;rsquo;t that hard, especially if we use the right tools. For the past few years, I&amp;rsquo;ve been using borg as a tool for doing backup of all my computer-related data.</description>
+      <description>I&amp;rsquo;m a self-hosted person, I own a VPS and have installed some applications that I use in my day-to-day activities. Those apps (like chat server, using Matrix) are becoming a part of my life, and losing the data that&amp;rsquo;s been there will be disastrous for me. Hence, backup is a must thing to do.&#xA;Doing backup isn&amp;rsquo;t that hard, especially if we use the right tools. For the past few years, I&amp;rsquo;ve been using borg as a tool for doing backup of all my computer-related data.</description>
     </item>
-    
     <item>
       <title>Simple Daily Journal Prompt</title>
       <link>/project/03_journal_prompt/</link>
       <pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate>
-      
       <guid>/project/03_journal_prompt/</guid>
-      <description>Over the past few years, I&amp;rsquo;ve developed a daily writing habit in my note-taking apps (I&amp;rsquo;m currently using Notion, having migrated from Evernote a few months ago). At first, I just write my daily feeling, what negative or positive emotions I currently feel, and the source of them. It helps me meditate on my life. Sometimes I even come up with a good quote or self-advice.
-But writing about feeling alone might be boring sometimes, so I started to look for something different.</description>
+      <description>Over the past few years, I&amp;rsquo;ve developed a daily writing habit in my note-taking apps (I&amp;rsquo;m currently using Notion, having migrated from Evernote a few months ago). At first, I just write my daily feeling, what negative or positive emotions I currently feel, and the source of them. It helps me meditate on my life. Sometimes I even come up with a good quote or self-advice.&#xA;But writing about feeling alone might be boring sometimes, so I started to look for something different.</description>
     </item>
-    
     <item>
       <title>Significance Test</title>
       <link>/posts/20220620-significance-test/</link>
       <pubDate>Mon, 20 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>/posts/20220620-significance-test/</guid>
-      <description>The main idea is we need to know whether this distribution is more likely to happen from another distribution with a level of p. So w need three things:
-The first distribution (base) and its parameter The second distribution (comparator) and its parameter A limit/threshold for which we could safely say this is different. The Z - Test The T-test is for small use case ≤ 30, whereas the z-test is for the normal case.</description>
+      <description>The main idea is we need to know whether this distribution is more likely to happen from another distribution with a level of p. So w need three things:&#xA;The first distribution (base) and its parameter The second distribution (comparator) and its parameter A limit/threshold for which we could safely say this is different. The Z - Test The T-test is for small use case ≤ 30, whereas the z-test is for the normal case.</description>
     </item>
-    
     <item>
       <title>Get Modified Files Within Two Snapshot</title>
       <link>/posts/20220602-get-modified-files-within-two-snapshot/</link>
       <pubDate>Thu, 02 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>/posts/20220602-get-modified-files-within-two-snapshot/</guid>
       <description>To make my blogging habit a little bit easier, I create a tool to easily convert my jupyter notebooks to markdown that could be parsed into Hugo, called pynote2mds3 that use nbconvert to convert and upload any image into S3. However, I soon find out that I need to manually run this command for each of my new posts and I kind of looking for a way to automate that. The solution is using make.</description>
     </item>
-    
     <item>
       <title>Data Visualization</title>
       <link>/project/231014_talks_dataviz/</link>
       <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>/project/231014_talks_dataviz/</guid>
       <description>I talked about basic data visualization, tips and technique. No recording published, but you can find the slides here.</description>
     </item>
-    
     <item>
       <title>Installing libolm From Source</title>
       <link>/posts/08-installing-libolm-from-source/</link>
       <pubDate>Tue, 09 Nov 2021 00:00:00 +0000</pubDate>
-      
       <guid>/posts/08-installing-libolm-from-source/</guid>
       <description>I stumble upon this great tool called matrix-commander that I think is the simplest way to programmatically interact with your Matrix server. I&amp;rsquo;m using these tools in order to send notifications from my server to my matrix room whenever something interesting happens (i.e when my backup is done, or when someone login to my server). It is based on matrix-nio, and only a large single file python. But I found one of the dependencies, libolm, is quite difficult to install (especially in my raspberry pi).</description>
     </item>
-    
     <item>
       <title>Shortcut to Capture Ideas</title>
       <link>/posts/shortcut_text/</link>
       <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
-      
       <guid>/posts/shortcut_text/</guid>
-      <description>One common theme from the majority of productivity articles/books that I read is to never let use your brain to store information. Use it to generate new ideas, to solve a problem, to think.
-But here is the thing: Sometimes when you are in a state of deep work, focusing on a task at hand, you might suddenly remember other tasks that you need to do later, or you might get an idea for other things that might not be related to your current task.</description>
+      <description>One common theme from the majority of productivity articles/books that I read is to never let use your brain to store information. Use it to generate new ideas, to solve a problem, to think.&#xA;But here is the thing: Sometimes when you are in a state of deep work, focusing on a task at hand, you might suddenly remember other tasks that you need to do later, or you might get an idea for other things that might not be related to your current task.</description>
     </item>
-    
     <item>
       <title>A Jupyter notebook - S3 Blogging Platform</title>
       <link>/project/02_jupyter_gdrive/</link>
       <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>/project/02_jupyter_gdrive/</guid>
       <description>Markdown is a good format to write almost anything. But we as a data scientist, use Jupyter Notebook, a lot. We could do a very rapid experiment, with plot, data frame, etc. This makes me wonder, is it possible to turn a jupyter notes into a blog post? I actually try to do this at my current company, to create some sort of knowledge management platform for our research team.</description>
     </item>
-    
     <item>
       <title>My Simple Hugo Theme </title>
       <link>/project/01_site/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>/project/01_site/</guid>
       <description>This website is built using hand crafted theme as a medium for me to learn Hugo theming. It&amp;rsquo;s not that beauty since I&amp;rsquo;m not a web developer, but I&amp;rsquo;ve learned so much about hugo and CSS/HTML in general. You can find the code in here.</description>
     </item>
-    
     <item>
       <title>Computer Vision for Vehicle Detection</title>
       <link>/project/231014_talks_bisaai_vehicle/</link>
       <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
-      
       <guid>/project/231014_talks_bisaai_vehicle/</guid>
       <description>My talk about basic computer vision techniques to detect vehicle from a camera installed at the road. The full talk can be watched on Here</description>
     </item>
-    
     <item>
       <title>About Me</title>
       <link>/about/</link>
       <pubDate>Fri, 29 Nov 2019 00:00:00 +0000</pubDate>
-      
       <guid>/about/</guid>
-      <description>Hello, My name is Adib Pratama. I&amp;rsquo;m a Senior Data Scientist at one of the company in Indonesia. This is the place where I&amp;rsquo;ll share what I know (if I&amp;rsquo;m not busy being lazy).
-You can find me at:
-Github, or LinkedIn I don&amp;rsquo;t have a social media though, so yeah.</description>
+      <description>Hello, My name is Adib Pratama. I&amp;rsquo;m a Senior Data Scientist at one of the company in Indonesia. This is the place where I&amp;rsquo;ll share what I know (if I&amp;rsquo;m not busy being lazy).&#xA;You can find me at:&#xA;Github, or LinkedIn I don&amp;rsquo;t have a social media though, so yeah.</description>
     </item>
-    
     <item>
       <title>Linux VPN via PPTP dari Terminal</title>
       <link>/posts/oldpost/linux-vpn-via-pptp-dari-terminal/</link>
       <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
-      
       <guid>/posts/oldpost/linux-vpn-via-pptp-dari-terminal/</guid>
-      <description>Sebagai salah satu cara untuk terhubung dengan resource yang ada di kantor ketika kita berada diluar (remote) adalah dengan menggunakan VPN. Ada beberapa jenis VPN, seperti openvpn dan pptp. Kali ini saya akan membahas proses koneksi VPN menggunakan PPTP di linux melalui command line.
-Langkahnya adalah :
-Memeriksa file yang dibutuhkan Membuat file konfigurasi Membuat koneksi Set default routing 1. Requirements Untuk dapat terhubung melalui VPN PPTP, ada 3 hal yang harus dimiliki, yakni:</description>
+      <description>Sebagai salah satu cara untuk terhubung dengan resource yang ada di kantor ketika kita berada diluar (remote) adalah dengan menggunakan VPN. Ada beberapa jenis VPN, seperti openvpn dan pptp. Kali ini saya akan membahas proses koneksi VPN menggunakan PPTP di linux melalui command line.&#xA;Langkahnya adalah :&#xA;Memeriksa file yang dibutuhkan Membuat file konfigurasi Membuat koneksi Set default routing 1. Requirements Untuk dapat terhubung melalui VPN PPTP, ada 3 hal yang harus dimiliki, yakni:</description>
     </item>
-    
   </channel>
 </rss>

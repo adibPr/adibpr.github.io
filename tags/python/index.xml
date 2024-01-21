@@ -6,35 +6,28 @@
     <description>Recent content in python on Adib.notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cohort Analysis With Python</title>
       <link>/posts/20231120-cohort-analysis/</link>
       <pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>/posts/20231120-cohort-analysis/</guid>
-      <description>Cohort analysis is one of the simple and effective tool to better understand how customer interact in business. We can look whether the customer are coming back, or whether their value are improved over time. A simple tools that should be on every data analytics toolbox. But first, what is a cohort?
-What is cohort? The technical definition of cohort analysis is behavioral analytics that breaks data into relevant groups and observes how their behavior changes over time.</description>
+      <description>Cohort analysis is one of the simple and effective tool to better understand how customer interact in business. We can look whether the customer are coming back, or whether their value are improved over time. A simple tools that should be on every data analytics toolbox. But first, what is a cohort?&#xA;What is cohort? The technical definition of cohort analysis is behavioral analytics that breaks data into relevant groups and observes how their behavior changes over time.</description>
     </item>
-    
     <item>
       <title>Building Python Layer for AWS Lambda with Docker</title>
       <link>/posts/20230922-python-aws-layer/</link>
       <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>/posts/20230922-python-aws-layer/</guid>
-      <description>The other day, I was building something with AWS Lambda that requires an additional package. Usually, AWS has provided some scientific packages such as scikit-learn and pandas as a Layer that is ready to use. Unfortunately, one of the packages that I need (seaborn) isn&amp;rsquo;t available yet, so in order to use it in my function, I need to create a Layer manually.
-Usually, this is pretty straightforward, all you need to do is to install the package inside a folder and zip it.</description>
+      <description>The other day, I was building something with AWS Lambda that requires an additional package. Usually, AWS has provided some scientific packages such as scikit-learn and pandas as a Layer that is ready to use. Unfortunately, one of the packages that I need (seaborn) isn&amp;rsquo;t available yet, so in order to use it in my function, I need to create a Layer manually.&#xA;Usually, this is pretty straightforward, all you need to do is to install the package inside a folder and zip it.</description>
     </item>
-    
     <item>
       <title>Get Modified Files Within Two Snapshot</title>
       <link>/posts/20220602-get-modified-files-within-two-snapshot/</link>
       <pubDate>Thu, 02 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>/posts/20220602-get-modified-files-within-two-snapshot/</guid>
       <description>To make my blogging habit a little bit easier, I create a tool to easily convert my jupyter notebooks to markdown that could be parsed into Hugo, called pynote2mds3 that use nbconvert to convert and upload any image into S3. However, I soon find out that I need to manually run this command for each of my new posts and I kind of looking for a way to automate that. The solution is using make.</description>
     </item>
-    
   </channel>
 </rss>

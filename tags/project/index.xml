@@ -6,43 +6,35 @@
     <description>Recent content in project on Adib.notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/project/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/project/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Simple Daily Journal Prompt</title>
       <link>/project/03_journal_prompt/</link>
       <pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate>
-      
       <guid>/project/03_journal_prompt/</guid>
-      <description>Over the past few years, I&amp;rsquo;ve developed a daily writing habit in my note-taking apps (I&amp;rsquo;m currently using Notion, having migrated from Evernote a few months ago). At first, I just write my daily feeling, what negative or positive emotions I currently feel, and the source of them. It helps me meditate on my life. Sometimes I even come up with a good quote or self-advice.
-But writing about feeling alone might be boring sometimes, so I started to look for something different.</description>
+      <description>Over the past few years, I&amp;rsquo;ve developed a daily writing habit in my note-taking apps (I&amp;rsquo;m currently using Notion, having migrated from Evernote a few months ago). At first, I just write my daily feeling, what negative or positive emotions I currently feel, and the source of them. It helps me meditate on my life. Sometimes I even come up with a good quote or self-advice.&#xA;But writing about feeling alone might be boring sometimes, so I started to look for something different.</description>
     </item>
-    
     <item>
       <title>Get Modified Files Within Two Snapshot</title>
       <link>/posts/20220602-get-modified-files-within-two-snapshot/</link>
       <pubDate>Thu, 02 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>/posts/20220602-get-modified-files-within-two-snapshot/</guid>
       <description>To make my blogging habit a little bit easier, I create a tool to easily convert my jupyter notebooks to markdown that could be parsed into Hugo, called pynote2mds3 that use nbconvert to convert and upload any image into S3. However, I soon find out that I need to manually run this command for each of my new posts and I kind of looking for a way to automate that. The solution is using make.</description>
     </item>
-    
     <item>
       <title>A Jupyter notebook - S3 Blogging Platform</title>
       <link>/project/02_jupyter_gdrive/</link>
       <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>/project/02_jupyter_gdrive/</guid>
       <description>Markdown is a good format to write almost anything. But we as a data scientist, use Jupyter Notebook, a lot. We could do a very rapid experiment, with plot, data frame, etc. This makes me wonder, is it possible to turn a jupyter notes into a blog post? I actually try to do this at my current company, to create some sort of knowledge management platform for our research team.</description>
     </item>
-    
     <item>
       <title>My Simple Hugo Theme </title>
       <link>/project/01_site/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>/project/01_site/</guid>
       <description>This website is built using hand crafted theme as a medium for me to learn Hugo theming. It&amp;rsquo;s not that beauty since I&amp;rsquo;m not a web developer, but I&amp;rsquo;ve learned so much about hugo and CSS/HTML in general. You can find the code in here.</description>
     </item>
-    
   </channel>
 </rss>

@@ -6,25 +6,21 @@
     <description>Recent content in selfhosted on Adib.notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/selfhosted/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/selfhosted/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Simple Backup with Borgmatic</title>
       <link>/posts/20221001-backup-with-borgmatic/</link>
       <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>/posts/20221001-backup-with-borgmatic/</guid>
-      <description>I&amp;rsquo;m a self-hosted person, I own a VPS and have installed some applications that I use in my day-to-day activities. Those apps (like chat server, using Matrix) are becoming a part of my life, and losing the data that&amp;rsquo;s been there will be disastrous for me. Hence, backup is a must thing to do.
-Doing backup isn&amp;rsquo;t that hard, especially if we use the right tools. For the past few years, I&amp;rsquo;ve been using borg as a tool for doing backup of all my computer-related data.</description>
+      <description>I&amp;rsquo;m a self-hosted person, I own a VPS and have installed some applications that I use in my day-to-day activities. Those apps (like chat server, using Matrix) are becoming a part of my life, and losing the data that&amp;rsquo;s been there will be disastrous for me. Hence, backup is a must thing to do.&#xA;Doing backup isn&amp;rsquo;t that hard, especially if we use the right tools. For the past few years, I&amp;rsquo;ve been using borg as a tool for doing backup of all my computer-related data.</description>
     </item>
-    
     <item>
       <title>Installing libolm From Source</title>
       <link>/posts/08-installing-libolm-from-source/</link>
       <pubDate>Tue, 09 Nov 2021 00:00:00 +0000</pubDate>
-      
       <guid>/posts/08-installing-libolm-from-source/</guid>
       <description>I stumble upon this great tool called matrix-commander that I think is the simplest way to programmatically interact with your Matrix server. I&amp;rsquo;m using these tools in order to send notifications from my server to my matrix room whenever something interesting happens (i.e when my backup is done, or when someone login to my server). It is based on matrix-nio, and only a large single file python. But I found one of the dependencies, libolm, is quite difficult to install (especially in my raspberry pi).</description>
     </item>
-    
   </channel>
 </rss>

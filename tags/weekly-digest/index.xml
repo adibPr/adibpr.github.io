@@ -6,28 +6,21 @@
     <description>Recent content in weekly digest on Adib.notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/weekly-digest/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 May 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/weekly-digest/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI Models that Runs Locally</title>
       <link>/posts/20230521-local-ai/</link>
       <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>/posts/20230521-local-ai/</guid>
-      <description>The rise of ChatGPT and other large language models is pretty fascinating in the past few months.
-New models are being published with larger model sizes and data, claiming to make an improvement from before.
-Apart from some serious debate on the potential danger of the technology, it surely opens new ways for us to do the things we used to do.
-Since some models are too expensive to run just for fun, I look and tried several models that could be run locally on my computer so I could build something interesting.</description>
+      <description>The rise of ChatGPT and other large language models is pretty fascinating in the past few months.&#xA;New models are being published with larger model sizes and data, claiming to make an improvement from before.&#xA;Apart from some serious debate on the potential danger of the technology, it surely opens new ways for us to do the things we used to do.&#xA;Since some models are too expensive to run just for fun, I look and tried several models that could be run locally on my computer so I could build something interesting.</description>
     </item>
-    
     <item>
       <title>Significance Test</title>
       <link>/posts/20220620-significance-test/</link>
       <pubDate>Mon, 20 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>/posts/20220620-significance-test/</guid>
-      <description>The main idea is we need to know whether this distribution is more likely to happen from another distribution with a level of p. So w need three things:
-The first distribution (base) and its parameter The second distribution (comparator) and its parameter A limit/threshold for which we could safely say this is different. The Z - Test The T-test is for small use case ≤ 30, whereas the z-test is for the normal case.</description>
+      <description>The main idea is we need to know whether this distribution is more likely to happen from another distribution with a level of p. So w need three things:&#xA;The first distribution (base) and its parameter The second distribution (comparator) and its parameter A limit/threshold for which we could safely say this is different. The Z - Test The T-test is for small use case ≤ 30, whereas the z-test is for the normal case.</description>
     </item>
-    
   </channel>
 </rss>

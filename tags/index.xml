@@ -6,195 +6,168 @@
     <description>Recent content in Tags on Adib.notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>data analysis</title>
       <link>/tags/data-analysis/</link>
-      <pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
-      
+      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
       <guid>/tags/data-analysis/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>data scientist</title>
+      <link>/tags/data-scientist/</link>
+      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/data-scientist/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>minimum viable product</title>
+      <link>/tags/minimum-viable-product/</link>
+      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/minimum-viable-product/</guid>
+      <description></description>
+    </item>
     <item>
       <title>python</title>
       <link>/tags/python/</link>
       <pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/python/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>talks</title>
       <link>/tags/talks/</link>
       <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/talks/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>telco</title>
       <link>/tags/telco/</link>
       <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/telco/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>aws</title>
       <link>/tags/aws/</link>
       <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/aws/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>docker</title>
       <link>/tags/docker/</link>
       <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/docker/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>event</title>
       <link>/tags/event/</link>
       <pubDate>Tue, 13 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/event/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>selfhelp</title>
       <link>/tags/selfhelp/</link>
       <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/selfhelp/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>deeplearning</title>
       <link>/tags/deeplearning/</link>
       <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/deeplearning/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>weekly digest</title>
       <link>/tags/weekly-digest/</link>
       <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/weekly-digest/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>clustering</title>
       <link>/tags/clustering/</link>
       <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/clustering/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>rfm</title>
       <link>/tags/rfm/</link>
       <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/rfm/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>borg</title>
       <link>/tags/borg/</link>
       <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>/tags/borg/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>selfhosted</title>
       <link>/tags/selfhosted/</link>
       <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>/tags/selfhosted/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>journal</title>
       <link>/tags/journal/</link>
       <pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate>
-      
       <guid>/tags/journal/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>project</title>
       <link>/tags/project/</link>
       <pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate>
-      
       <guid>/tags/project/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>statistics</title>
       <link>/tags/statistics/</link>
       <pubDate>Mon, 20 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>/tags/statistics/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>dataviz</title>
       <link>/tags/dataviz/</link>
       <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>/tags/dataviz/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>s3</title>
       <link>/tags/s3/</link>
       <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>/tags/s3/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>computer vision</title>
       <link>/tags/computer-vision/</link>
       <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/computer-vision/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>linux</title>
       <link>/tags/linux/</link>
       <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
-      
       <guid>/tags/linux/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

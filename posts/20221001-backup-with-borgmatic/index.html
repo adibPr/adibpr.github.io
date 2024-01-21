@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-grid.min.css" integrity="sha512-ZuRTqfQ3jNAKvJskDAU/hxbX1w25g41bANOVd1Co6GahIe2XjM6uVZ9dh0Nt3KFCOA061amfF2VeL60aJXdwwQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-reboot.min.css" integrity="sha512-ZHQv/ue+hZQ+Jd+JKhxic17TUraZ9UwS6G7RcwSrQEE9j/m/AGRwj1OmYrkP43H0B/Wf0pg3hfbHCMAS6SGHOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" type="text/css" href="../../css/mine.css">
+
   
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
@@ -91,35 +92,35 @@ This is all my configurations, scripts, data, and anything that I want to backup
 <p>In the <code>backup</code> folder, apart from the things that I want to back up, I also put my borgmatic configuration in here.
 In most cases, my borgmatic configuration is pretty simple, with only 5-6 things that need to be set up.
 Borgmatic itself uses YAML data format for its configuration, so it&rsquo;s easy to understand.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">location</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">source_directories</span>:
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">/home/me/backup</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">repositories</span>:
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">/home/me/borg</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">storage</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">encryption_passphrase</span>: <span style="color:#e6db74">&#34;mYl1Tl3SecR3T&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">borg_base_directory</span>: <span style="color:#ae81ff">/home/me/</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">archive_name_format</span>: <span style="color:#e6db74">&#39;auto-{now:%Y-%m-%d}&#39;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">retention</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">keep_weekly</span>: <span style="color:#ae81ff">2</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">keep_monthly</span>: <span style="color:#ae81ff">3</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">prefix</span>: <span style="color:#ae81ff">auto</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">consistency</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">prefix</span>: <span style="color:#ae81ff">auto</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">hooks</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">before_backup</span>:
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">echo &#34;Starting a backup.&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">after_backup</span>:
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">echo &#34;Finished a backup.&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">on_error</span>:
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">echo &#34;Error during prune/compact/create/check.&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">after_everything</span>:
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">rclone sync --progress /home/me/borg/ S3:/backup/borg/</span>
-</span></span></code></pre></div><p>The first thing that you need to specify is the location of the folder we want to backup and the repository.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">location</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">source_directories</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">/home/me/backup</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">repositories</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">/home/me/borg</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">storage</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">encryption_passphrase</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;mYl1Tl3SecR3T&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">borg_base_directory</span><span class="p">:</span><span class="w"> </span><span class="l">/home/me/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">archive_name_format</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;auto-{now:%Y-%m-%d}&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">retention</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">keep_weekly</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">keep_monthly</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l">auto</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">consistency</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l">auto</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">hooks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">before_backup</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">echo &#34;Starting a backup.&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">after_backup</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">echo &#34;Finished a backup.&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">on_error</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">echo &#34;Error during prune/compact/create/check.&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">after_everything</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">rclone sync --progress /home/me/borg/ S3:/backup/borg/</span><span class="w">
+</span></span></span></code></pre></div><p>The first thing that you need to specify is the location of the folder we want to backup and the repository.
 With my structure, this means the <code>~/backup</code> and <code>~/borg</code> folder.</p>
 <p>The second one is the repository configuration, like the password we are using in the repository and the name of the archive. Here, for the archive name, I&rsquo;m using the prefix <code>auto-</code>.</p>
 <p>Next is retention, how many archives we would like to keep. For example, in the configuration above, I want to have 2 weekly archive, and 3 monthly archive. So if for the new week, I already have 2 weeks of archive, the borgmatic will automatically prune/delete the oldest one.</p>

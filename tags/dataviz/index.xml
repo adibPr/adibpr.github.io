@@ -6,15 +6,14 @@
     <description>Recent content in dataviz on Adib.notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/dataviz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/dataviz/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Data Visualization</title>
       <link>/project/231014_talks_dataviz/</link>
       <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>/project/231014_talks_dataviz/</guid>
       <description>I talked about basic data visualization, tips and technique. No recording published, but you can find the slides here.</description>
     </item>
-    
   </channel>
 </rss>

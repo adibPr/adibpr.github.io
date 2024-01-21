@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-grid.min.css" integrity="sha512-ZuRTqfQ3jNAKvJskDAU/hxbX1w25g41bANOVd1Co6GahIe2XjM6uVZ9dh0Nt3KFCOA061amfF2VeL60aJXdwwQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-reboot.min.css" integrity="sha512-ZHQv/ue+hZQ+Jd+JKhxic17TUraZ9UwS6G7RcwSrQEE9j/m/AGRwj1OmYrkP43H0B/Wf0pg3hfbHCMAS6SGHOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" type="text/css" href="../../css/mine.css">
+
   
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
@@ -76,10 +77,10 @@
 <p>But the problem is I need a way to filter files that are only modified, or new in my notebooks directory. We do not want to reprocess all unchanged files. I tried looking for another simple solution, like using Linux command <code>find</code> to find all files that are being modified in the last <em>n</em> minutes, but that is still not enough for my need. Then as a challenge, I decided to write a simple script to accomplish that.</p>
 <p>The idea is to use <a href="https://pythonhosted.org/watchdog/">watchdog</a> dirsnapshot function to create a snapshot of a folder, and compare it to the previous snapshot.<br>
 Using watchdog, we could create a snapshot of a directory with command:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>snapshot<span style="color:#f92672">=</span>DirectorySnapshot(path)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">snapshot</span><span class="o">=</span><span class="n">DirectorySnapshot</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 </span></span></code></pre></div><p>and if you have two snapshot, you can get the difference (i.e files that are modified in one snapshot compare to the others) by using <code>DirectorySnapshotDiff</code> function:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>diff <span style="color:#f92672">=</span> DirectorySnapshotDiff(old_snapshot, new_snapshot)
-</span></span><span style="display:flex;"><span>final_data <span style="color:#f92672">=</span> diff<span style="color:#f92672">.</span>files_created <span style="color:#f92672">+</span> diff<span style="color:#f92672">.</span>files_modified
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">diff</span> <span class="o">=</span> <span class="n">DirectorySnapshotDiff</span><span class="p">(</span><span class="n">old_snapshot</span><span class="p">,</span> <span class="n">new_snapshot</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">final_data</span> <span class="o">=</span> <span class="n">diff</span><span class="o">.</span><span class="n">files_created</span> <span class="o">+</span> <span class="n">diff</span><span class="o">.</span><span class="n">files_modified</span>
 </span></span></code></pre></div><p>With this final list of files, I then could pipe it into my converter tools to create the markdown. Now I don&rsquo;t have to type one by one the filename of my notes, I just call <code>make note</code> to convert all my modified/new notes into markdown. Simple right?<br>
 You can see my code for this diff in: <a href="https://gist.github.com/adibPr/5ae61b5f5aa2b3fa64aa0e1d57f9abe0">my gist</a></p>
 
