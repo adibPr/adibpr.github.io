@@ -6,8 +6,29 @@
     <description>Recent content in Tags on Adib.notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 16 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>campaign</title>
+      <link>/tags/campaign/</link>
+      <pubDate>Sat, 16 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/campaign/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>lookalike</title>
+      <link>/tags/lookalike/</link>
+      <pubDate>Sat, 16 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/lookalike/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>talks</title>
+      <link>/tags/talks/</link>
+      <pubDate>Sat, 16 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/talks/</guid>
+      <description></description>
+    </item>
     <item>
       <title>data analysis</title>
       <link>/tags/data-analysis/</link>
@@ -34,13 +55,6 @@
       <link>/tags/minimum-viable-product/</link>
       <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
       <guid>/tags/minimum-viable-product/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>talks</title>
-      <link>/tags/talks/</link>
-      <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>/tags/talks/</guid>
       <description></description>
     </item>
     <item>

@@ -6,8 +6,15 @@
     <description>Recent content in talks on Adib.notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 16 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/talks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Campaign Audience Targeting With Lookalike Model</title>
+      <link>/project/2403_talks_lookalike/</link>
+      <pubDate>Sat, 16 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>/project/2403_talks_lookalike/</guid>
+      <description>I talked about campaign targeting, what it is, how to find the right audience using lookalike model, and implementation of several basic lookalike model approach. Slides and notes can be found here</description>
+    </item>
     <item>
       <title>Leveraging Telco Data Beyond Traditional Telco Business</title>
       <link>/project/231023_talks_thrive_dsi/</link>

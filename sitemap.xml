@@ -3,7 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <lastmod>2024-01-31T00:00:00+00:00</lastmod>
+    <lastmod>2024-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/campaign/</loc>
+    <lastmod>2024-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/project/2403_talks_lookalike/</loc>
+    <lastmod>2024-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/lookalike/</loc>
+    <lastmod>2024-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2024-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/talks/</loc>
+    <lastmod>2024-03-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/data-analysis/</loc>
     <lastmod>2024-01-31T00:00:00+00:00</lastmod>
@@ -20,9 +35,6 @@
     <loc>/posts/20240919-rfm-analysis-post/</loc>
     <lastmod>2024-01-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2024-01-31T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/posts/20240120-hierarchy-of-needs/</loc>
     <lastmod>2024-01-20T00:00:00+00:00</lastmod>
   </url><url>
@@ -33,9 +45,6 @@
     <lastmod>2023-11-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/project/231023_talks_thrive_dsi/</loc>
-    <lastmod>2023-10-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/talks/</loc>
     <lastmod>2023-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/telco/</loc>
