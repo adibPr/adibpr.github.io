@@ -7,8 +7,7 @@
 }
 
 body {
-    font-family: 'Alegreya', 'PT Serif', serif;
-    font-size: 1.2rem;
+    font-family: "Ubuntu", sans-serif;
     margin-bottom: 1rem;
     background-color: var(--background-color);
     color: var(--font-color);
@@ -38,12 +37,14 @@ pre code {
 
 .chroma {
     max-width: 50em;
+    padding: 0.5rem;
 }
 
 #mynav {
     padding-top: 1.5em;
     padding-bottom: 1.5em;
-    font-family: 'Alegreya';
+    font-family: 'Ubuntu';
+    font-weight: 500;
 }
 
 #theme > button {
@@ -98,6 +99,7 @@ pre code {
 }
 .toc-title {
     margin-bottom: 0em;
+    font-weight: 200;
     line-height: 2;
     width: 85%;
     color: blue;
@@ -105,7 +107,7 @@ pre code {
 
 .toc-date {
     width: 15%;
-    font-size: 1rem;
+    font-size: 0.7rem;
     text-align: right;
 }
 
@@ -191,6 +193,8 @@ pre code {
 /* Overwrite Bootstrap  */
 /* For pagination */
 .page-link {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 0.9rem;
     color: var(--link-color);
     background-color: #fff0;
     border: 1px solid #dee2e600;

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>computer vision on Adib.notes</title>
+    <title>Computer Vision on Adib.notes</title>
     <link>/tags/computer-vision/</link>
-    <description>Recent content in computer vision on Adib.notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Computer Vision on Adib.notes</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 28 Jun 2020 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/computer-vision/index.xml" rel="self" type="application/rss+xml" />

@@ -22,7 +22,7 @@
     onload="renderMathInElement(document.body);"></script>
 
   <script src="../../js/theme.js"></script>
-  <title>Adib.notes|Campaign Audience Targeting With Lookalike Model</title>
+  <title>Adib.notes|Building Python Layer for AWS Lambda with Docker</title>
 
 </head>
 <body>
@@ -47,10 +47,10 @@
             <div id="lsidebar"></div>
             <div id="main">
   <center>
-    <h1>Campaign Audience Targeting With Lookalike Model</h1>
+    <h1>Building Python Layer for AWS Lambda with Docker</h1>
     
 
-<time datetime="2024-03-16">Mar 16, 2024</time>
+<time datetime="2023-09-22">Sep 22, 2023</time>
 
 
     
@@ -63,21 +63,42 @@
     
       
         
-        <a class="btn btn-sm btn-outline-success tag-btn tag" href="../../tags/talks">talks</a>
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="../../tags/python">python</a>
       
         
-        <a class="btn btn-sm btn-outline-success tag-btn tag" href="../../tags/lookalike">lookalike</a>
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="../../tags/aws">aws</a>
       
         
-        <a class="btn btn-sm btn-outline-success tag-btn tag" href="../../tags/campaign">campaign</a>
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="../../tags/docker">docker</a>
       
     
   </center>
   <br>
 
   <div id="content">
-    <p>I talked about campaign targeting, what it is, how to find the right audience using lookalike model, and implementation of several basic lookalike model approach.
-Slides and notes can be found <a href="https://drive.google.com/drive/folders/1WN3YAjSzzrA9gP66t5IHcS1qBZ0gf5-K">here</a></p>
+    <p>The other day, I was building something with <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> that requires an additional package.
+Usually, AWS has provided some scientific packages such as <a href="https://scikit-learn.org/">scikit-learn</a> and <a href="https://pandas.pydata.org/">pandas</a> as a Layer that is ready to use.
+Unfortunately, one of the packages that I need (<a href="https://seaborn.pydata.org/">seaborn</a>) isn&rsquo;t available yet, so in order to use it in my function, I need to create a Layer manually.</p>
+<p>Usually, this is pretty straightforward, all you need to do is to install the package inside a folder and zip it. The command to run it:</p>
+<p><code>pip install -r requirements.txt -t python/</code></p>
+<p>This command will install the package listed in the <code>requirements.txt</code> file into a folder <code>python</code>.
+Then, you could zip this folder and upload it as an AWS Layer.</p>
+<p>However, I happen to be using a MacBook Air with M1 Processor. In some cases, when installing something from a source, the AWS Lambda failed to use it due to incompatibility of the processor type.
+To handle this, I create a docker container with x86 architecture that will do the installing and zipping for me, and then I upload it to the final file to AWS.
+So far the result is good, all I need to do is change the <code>requirements.txt</code> to what package I want to install, run the docker, copy the zip to my local machine, and upload it.</p>
+<p>The Dockerfile configuration I ended up is:</p>
+<pre tabindex="0"><code>FROM amd64/python:3.7.17-bookworm
+
+WORKDIR /usr/src/app
+COPY requirements.txt ./
+RUN apt update
+RUN apt install -y zip
+RUN mkdir -p ./python
+RUN pip install -r requirements.txt -t python/
+RUN zip -r python.zip python
+
+ENTRYPOINT [&#34;tail&#34;, &#34;-f&#34;, &#34;/dev/null&#34;]
+</code></pre><p>You can find the whole code and the bash script to run it can be found in my <a href="https://app.pradib.my.id/gitea/adib/python_aws_layer">git</a>.</p>
 
   </div>
 

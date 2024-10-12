@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>lookalike on Adib.notes</title>
+    <title>Lookalike on Adib.notes</title>
     <link>/tags/lookalike/</link>
-    <description>Recent content in lookalike on Adib.notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Lookalike on Adib.notes</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 16 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/lookalike/index.xml" rel="self" type="application/rss+xml" />

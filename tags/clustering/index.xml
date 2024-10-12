@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>clustering on Adib.notes</title>
+    <title>Clustering on Adib.notes</title>
     <link>/tags/clustering/</link>
-    <description>Recent content in clustering on Adib.notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Clustering on Adib.notes</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 03 Apr 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/clustering/index.xml" rel="self" type="application/rss+xml" />

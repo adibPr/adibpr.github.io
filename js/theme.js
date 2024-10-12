@@ -10,7 +10,7 @@ var whiteTheme = {
     '--theme': 'white',
     '--font-color': 'black',
     '--background-color': 'white',
-    '--link-color': 'blue',
+    '--link-color': '#007a7f',
     '--pre-code-color': 'black',
 }
 

@@ -4,50 +4,50 @@
     <title>Posts on Adib.notes</title>
     <link>/posts/</link>
     <description>Recent content in Posts on Adib.notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>RFM Segmentation and Analysis with Python</title>
-      <link>/posts/20240919-rfm-analysis-post/</link>
+      <link>/posts/20240919---rfm-analysis-post/</link>
       <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>/posts/20240919-rfm-analysis-post/</guid>
+      <guid>/posts/20240919---rfm-analysis-post/</guid>
       <description>A good understanding of the customer is key to a successful business. Not all customers are created equally. Some (like me), might want the cheapest/free offer, others perhaps willing to pay more to get a premium service, and some might still doubt taking our full offer. Some might be happy with the product and thus keep using it, while others may be on the verge of churning due to various reasons.</description>
     </item>
     <item>
       <title>Minimum Actionable Insight: Providing Value as a Data Scientist</title>
-      <link>/posts/20240120-hierarchy-of-needs/</link>
+      <link>/posts/20240120---hierarchy-of-needs/</link>
       <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>/posts/20240120-hierarchy-of-needs/</guid>
+      <guid>/posts/20240120---hierarchy-of-needs/</guid>
       <description>I want to start by stating something not so obvious: not all company needs to add AI to their current business. When we consider the data science hierarchy of needs, AI utilization is placed at the top of the hierarchy, meaning its value will be visible if the other needs below it are accommodated (except of course when AI is the core business). This is true especially if our company is just getting started, or still trying to gain traction.</description>
     </item>
     <item>
       <title>Cohort Analysis With Python</title>
-      <link>/posts/20231120-cohort-analysis/</link>
+      <link>/posts/20231120---cohort-analysis/</link>
       <pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>/posts/20231120-cohort-analysis/</guid>
+      <guid>/posts/20231120---cohort-analysis/</guid>
       <description>Cohort analysis is one of the simple and effective tool to better understand how customer interact in business. We can look whether the customer are coming back, or whether their value are improved over time. A simple tools that should be on every data analytics toolbox. But first, what is a cohort?&#xA;What is cohort? The technical definition of cohort analysis is behavioral analytics that breaks data into relevant groups and observes how their behavior changes over time.</description>
     </item>
     <item>
       <title>Building Python Layer for AWS Lambda with Docker</title>
-      <link>/posts/20230922-python-aws-layer/</link>
+      <link>/posts/20230922---python-aws-layer/</link>
       <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>/posts/20230922-python-aws-layer/</guid>
+      <guid>/posts/20230922---python-aws-layer/</guid>
       <description>The other day, I was building something with AWS Lambda that requires an additional package. Usually, AWS has provided some scientific packages such as scikit-learn and pandas as a Layer that is ready to use. Unfortunately, one of the packages that I need (seaborn) isn&amp;rsquo;t available yet, so in order to use it in my function, I need to create a Layer manually.&#xA;Usually, this is pretty straightforward, all you need to do is to install the package inside a folder and zip it.</description>
     </item>
     <item>
       <title>Neo4J Graph Summit 2023</title>
-      <link>/posts/20230613-neo4j-graph-summit/</link>
+      <link>/posts/20230613---neo4j-graph-summit/</link>
       <pubDate>Tue, 13 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>/posts/20230613-neo4j-graph-summit/</guid>
+      <guid>/posts/20230613---neo4j-graph-summit/</guid>
       <description>Last week I got the chance to attend Graph Summit 2023 Jakarta, organized by neo4j. This event discusses the power of the graph database compared to a traditional relational database in terms of complex relations and data queries.&#xA;There are also several presentations regarding the real-world use case from different speakers.&#xA;Influencer Taxes One that is memorable for me is from Mr. Iwan Djuniardi about how the Directorate General of Taxes Indonesia tries to use Graph database to detect potential income of internet influencer, and thus calculating the tax.</description>
     </item>
     <item>
       <title>Producer and Consumer</title>
-      <link>/posts/20230613-input-output/</link>
+      <link>/posts/20230613---input-output/</link>
       <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
-      <guid>/posts/20230613-input-output/</guid>
+      <guid>/posts/20230613---input-output/</guid>
       <description>I used to learn something by passively consuming it. Be it by watching a video course, reading a book/article, or looking into tutorials. Most of the time, the knowledge will be lost as soon as I move to learn another thing. So now, I&amp;rsquo;m trying a new thing. Whenever I want to learn something, I must produce something. So instead of passively consuming, I need to actively produce as well.</description>
     </item>
     <item>

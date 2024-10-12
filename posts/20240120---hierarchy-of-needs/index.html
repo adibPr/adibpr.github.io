@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-sccale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-grid.min.css" integrity="sha512-ZuRTqfQ3jNAKvJskDAU/hxbX1w25g41bANOVd1Co6GahIe2XjM6uVZ9dh0Nt3KFCOA061amfF2VeL60aJXdwwQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-reboot.min.css" integrity="sha512-ZHQv/ue+hZQ+Jd+JKhxic17TUraZ9UwS6G7RcwSrQEE9j/m/AGRwj1OmYrkP43H0B/Wf0pg3hfbHCMAS6SGHOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="../../css/mine.css">
+
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+  <script src="../../js/theme.js"></script>
+  <title>Adib.notes|Minimum Actionable Insight: Providing Value as a Data Scientist</title>
+
+</head>
+<body>
+        <div class="containers">
+            <div id="navigation"><div id="mynav">
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="../../"> Home </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../tags"> Tags </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../project"> Project & Talks </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../about"> About </a>
+    </li>
+  </ul>
+</div>
+</div>
+            <div id="lsidebar"></div>
+            <div id="main">
+  <center>
+    <h1>Minimum Actionable Insight: Providing Value as a Data Scientist</h1>
+    
+
+<time datetime="2024-01-20">Jan 20, 2024</time>
+
+
+    
+    
+    
+    
+        
+    
+    <br>
+    
+      
+        
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="../../tags/data-analysis">data analysis</a>
+      
+        
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="../../tags/data-scientist">data scientist</a>
+      
+        
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="../../tags/minimum-viable-product">minimum viable product</a>
+      
+    
+  </center>
+  <br>
+
+  <div id="content">
+    <p><img src="https://bucket1.is3.cloudhost.id/blog/20240120_hierarchy_of_needs/Leonardo_Diffusion_XL_a_duck_working_as_a_data_scientist_looki_1.jpg" alt="Mr. Duck working on his RFM analysis (generated with Leonardo AI)"></p>
+<p>I want to start by stating something not so obvious: not all company needs to add AI to their current business.
+When we consider the data science hierarchy of needs, AI utilization is placed at the top of the hierarchy,
+meaning its value will be visible if the other needs below it are accommodated (except of course when AI is the core business).
+This is true especially if our company is just getting started, or still trying to gain traction.</p>
+<p><img src="https://bucket1.is3.cloudhost.id/blog/20240120_hierarchy_of_needs/Hierarchy%20of%20Needs.jpg" alt="Data Science Hierarchy of Needs">
+However, we do not need to wait until everything is perfect (i.e. the data warehouse is 100% ready, the data is clean, etc) to get the value out of our data (since it never will be ready). Just like the idea of MVP of a product, we could also create a minimum actionable insight using what we currently have. The keywords here are minimum and actionable. Minimum since we want to do a small experiment/analysis using the data that we currently have in hand. Actionable because we want to focus on any information/insight that could improve our business. If we can’t take action from the result of our analysis, it means we just doing analysis for the sake of doing analysis. No matter how sophisticated that analysis is, it is still useless.</p>
+<h1 id="minimum-actoinable-insight">Minimum Actoinable Insight</h1>
+<p>So, what kind of minimum actionable insight that we can do? Based on my experience, there are several low-hanging analyses that could be done in a relatively short time but are providing valuable information to our business. Those analyses are:</p>
+<h2 id="1-centralized-dashboard">1. Centralized Dashboard</h2>
+<p>Do not underestimate the value of a centralized dashboard. A dashboard could provide a quick look into how the overall business is going. This doesn’t need to be real-time at first. Data up to yesterday is enough to get a glimpse of the overall trend and it could provide us with some insight regarding our past data. Are there any seasonal trends? Are our users coming back? Do our total transaction and value increase month to month or not? This insight could be answered via a simple dashboard.
+<img src="https://bucket1.is3.cloudhost.id/blog/20240120_hierarchy_of_needs/Sales%20Sample%20Dashboard.png" alt="Simple dashboard could provide valuable insight"></p>
+<h2 id="2-cohort-analysis">2. Cohort Analysis</h2>
+<p>This is my favorite. As a business, we want the users to keep coming back to use our product. Their coming back is a sign that our product is being used and is solving their needs. Cohort analysis is a simple yet powerful technique to track metrics (i.e. retention rates) across different groups over time. By tracking their behavior over time, we could analyze which group has a better retention rate, better transaction power, or any other metrics, thus leading to a different approach to those groups. You can find more about the details and technicality in my other post here.
+<img src="https://bucket1.is3.cloudhost.id/blog/20240120_hierarchy_of_needs/cohort.png" alt="Cohort analysis"></p>
+<h2 id="3-customer-profiling-and-segmentation">3. Customer Profiling and Segmentation.</h2>
+<p>If we have collected some information about our customer, then we could group/segment them based on their profile. We could start segmenting based on demographic (age, gender), geographic (location) or behavioral (purchase pattern). Even if we didn’t collect any personal information, only transactional data, we could apply RFM (Recency, Frequency, Monetary) segmentation on it, to find out who our best customers are.</p>
+<p>RFM works by segmenting our customer based on their transaction recency, frequency, and monetary (amount). By combining those 3 segments, we could identify multiple personas/groups, such as users that are loyal to us (very recent, high amount of transactions), or user that are about to churn (low in recency, but have good past frequency). This information could be used to adapt our business actions more strategically.</p>
+<h2 id="4-funnel-analysis">4. Funnel analysis</h2>
+<p>Lastly, we could also analyze our app’s overall journey from start to finish. For example, if our app is an e-commerce app, then we could analyze our user journey from visiting our app, product discovery via searching or front page browsing, adding to cart, checkout, payment, and order confirmation. Within each step, we could analyze if is there any significant drop (percentage-wise) from one step to the next one.</p>
+<p>Let’s say we have a significant drop from checkout to payment, then we could analyze what is the potential root cause for this. Is there any issue with the payment gateway? Or does the user experience need improvement? We could also combine it further with user profiles and segment, to figure out whether this is applicable to specific segment only or for all customer. This provides us with actionable insight to enhance our app’s user experience, conversion rates, and overall application usability.
+<img src="https://bucket1.is3.cloudhost.id/blog/20240120_hierarchy_of_needs/Funnel%20Analysis.png" alt="Funnel action of a e-commerce"></p>
+<h1 id="conclusion">Conclusion</h1>
+<p>I n the end, our job as a data scientist is not to do advanced and complex machine learning modeling. All those things are tools, not the job. Our job is to leverage the data that we have to solve business problems. Sometimes the problem requires advanced and complex ML, but sometimes when the business is new, the data isn’t ready, or the company isn’t ready, we still could provide value by doing simple analysis that could make an impact on our business.</p>
+
+  </div>
+
+</div>
+            <div id="rsidebar"></div>
+            <div id="theme"> 
+                <a href="#" class="nav-link" onclick="changeTheme()"><i data-feather="sun"></i></a>
+            </div>
+            <div id="footer"><script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.1/feather.min.js" integrity="sha512-4lykFR6C2W55I60sYddEGjieC2fU79R7GUtaqr3DzmNbo0vSaO1MfUjMoTFYYuedjfEix6uV9jVTtRCSBU/Xiw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  feather.replace()
+</script>
+</div>
+        </div>
+    </body>
+</html>

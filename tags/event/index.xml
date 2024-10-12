@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>event on Adib.notes</title>
+    <title>Event on Adib.notes</title>
     <link>/tags/event/</link>
-    <description>Recent content in event on Adib.notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Event on Adib.notes</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 13 Jun 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/event/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Neo4J Graph Summit 2023</title>
-      <link>/posts/20230613-neo4j-graph-summit/</link>
+      <link>/posts/20230613---neo4j-graph-summit/</link>
       <pubDate>Tue, 13 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>/posts/20230613-neo4j-graph-summit/</guid>
+      <guid>/posts/20230613---neo4j-graph-summit/</guid>
       <description>Last week I got the chance to attend Graph Summit 2023 Jakarta, organized by neo4j. This event discusses the power of the graph database compared to a traditional relational database in terms of complex relations and data queries.&#xA;There are also several presentations regarding the real-world use case from different speakers.&#xA;Influencer Taxes One that is memorable for me is from Mr. Iwan Djuniardi about how the Directorate General of Taxes Indonesia tries to use Graph database to detect potential income of internet influencer, and thus calculating the tax.</description>
     </item>
   </channel>

@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>python on Adib.notes</title>
+    <title>Python on Adib.notes</title>
     <link>/tags/python/</link>
-    <description>Recent content in python on Adib.notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Python on Adib.notes</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>RFM Segmentation and Analysis with Python</title>
-      <link>/posts/20240919-rfm-analysis-post/</link>
+      <link>/posts/20240919---rfm-analysis-post/</link>
       <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>/posts/20240919-rfm-analysis-post/</guid>
+      <guid>/posts/20240919---rfm-analysis-post/</guid>
       <description>A good understanding of the customer is key to a successful business. Not all customers are created equally. Some (like me), might want the cheapest/free offer, others perhaps willing to pay more to get a premium service, and some might still doubt taking our full offer. Some might be happy with the product and thus keep using it, while others may be on the verge of churning due to various reasons.</description>
     </item>
     <item>
       <title>Cohort Analysis With Python</title>
-      <link>/posts/20231120-cohort-analysis/</link>
+      <link>/posts/20231120---cohort-analysis/</link>
       <pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>/posts/20231120-cohort-analysis/</guid>
+      <guid>/posts/20231120---cohort-analysis/</guid>
       <description>Cohort analysis is one of the simple and effective tool to better understand how customer interact in business. We can look whether the customer are coming back, or whether their value are improved over time. A simple tools that should be on every data analytics toolbox. But first, what is a cohort?&#xA;What is cohort? The technical definition of cohort analysis is behavioral analytics that breaks data into relevant groups and observes how their behavior changes over time.</description>
     </item>
     <item>
       <title>Building Python Layer for AWS Lambda with Docker</title>
-      <link>/posts/20230922-python-aws-layer/</link>
+      <link>/posts/20230922---python-aws-layer/</link>
       <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>/posts/20230922-python-aws-layer/</guid>
+      <guid>/posts/20230922---python-aws-layer/</guid>
       <description>The other day, I was building something with AWS Lambda that requires an additional package. Usually, AWS has provided some scientific packages such as scikit-learn and pandas as a Layer that is ready to use. Unfortunately, one of the packages that I need (seaborn) isn&amp;rsquo;t available yet, so in order to use it in my function, I need to create a Layer manually.&#xA;Usually, this is pretty straightforward, all you need to do is to install the package inside a folder and zip it.</description>
     </item>
     <item>
