@@ -3,7 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <lastmod>2024-03-16T00:00:00+00:00</lastmod>
+    <lastmod>2024-11-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/posts/20241212---aws-community/</loc>
+    <lastmod>2024-11-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/event/</loc>
+    <lastmod>2024-11-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/posts/</loc>
+    <lastmod>2024-11-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2024-11-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/campaign/</loc>
     <lastmod>2024-03-16T00:00:00+00:00</lastmod>
@@ -12,9 +24,6 @@
     <lastmod>2024-03-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/lookalike/</loc>
-    <lastmod>2024-03-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2024-03-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/talks/</loc>
@@ -26,13 +35,10 @@
     <loc>/tags/data-scientist/</loc>
     <lastmod>2024-01-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/</loc>
-    <lastmod>2024-01-31T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/python/</loc>
     <lastmod>2024-01-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/20240919---rfm-analysis-post/</loc>
+    <loc>/posts/20240219---rfm-analysis-post/</loc>
     <lastmod>2024-01-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/posts/20240120---hierarchy-of-needs/</loc>
@@ -58,9 +64,6 @@
   </url><url>
     <loc>/tags/docker/</loc>
     <lastmod>2023-09-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/event/</loc>
-    <lastmod>2023-06-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/posts/20230613---neo4j-graph-summit/</loc>
     <lastmod>2023-06-13T00:00:00+00:00</lastmod>

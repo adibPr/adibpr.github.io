@@ -6,13 +6,20 @@
     <description>Recent content in Posts on Adib.notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 23 Nov 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>AWS Community Day</title>
+      <link>/posts/20241212---aws-community/</link>
+      <pubDate>Sat, 23 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>/posts/20241212---aws-community/</guid>
+      <description>This November, I attend the AWS Community Day Indonesia in UI, Depok. The event constitutes a main event with a main speaker presentation and some parallel short talks (about 15 minutes). There 2 main talks, but I only remember the presentation of Mas Donnie, one of the legendary AWS Advocates. He talks about the evolution of computing, and how modern tools and ecosystems could fit into that. In the end, we also see a slight demo regarding Gen AI capability, plus AWS&amp;rsquo;s new Gen AI assistant, q.</description>
+    </item>
+    <item>
       <title>RFM Segmentation and Analysis with Python</title>
-      <link>/posts/20240919---rfm-analysis-post/</link>
+      <link>/posts/20240219---rfm-analysis-post/</link>
       <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>/posts/20240919---rfm-analysis-post/</guid>
+      <guid>/posts/20240219---rfm-analysis-post/</guid>
       <description>A good understanding of the customer is key to a successful business. Not all customers are created equally. Some (like me), might want the cheapest/free offer, others perhaps willing to pay more to get a premium service, and some might still doubt taking our full offer. Some might be happy with the product and thus keep using it, while others may be on the verge of churning due to various reasons.</description>
     </item>
     <item>

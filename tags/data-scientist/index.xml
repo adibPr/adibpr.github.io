@@ -10,9 +10,9 @@
     <atom:link href="/tags/data-scientist/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>RFM Segmentation and Analysis with Python</title>
-      <link>/posts/20240919---rfm-analysis-post/</link>
+      <link>/posts/20240219---rfm-analysis-post/</link>
       <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>/posts/20240919---rfm-analysis-post/</guid>
+      <guid>/posts/20240219---rfm-analysis-post/</guid>
       <description>A good understanding of the customer is key to a successful business. Not all customers are created equally. Some (like me), might want the cheapest/free offer, others perhaps willing to pay more to get a premium service, and some might still doubt taking our full offer. Some might be happy with the product and thus keep using it, while others may be on the verge of churning due to various reasons.</description>
     </item>
     <item>

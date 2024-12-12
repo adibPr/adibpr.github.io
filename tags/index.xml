@@ -6,8 +6,15 @@
     <description>Recent content in Tags on Adib.notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 23 Nov 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Event</title>
+      <link>/tags/event/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/tags/event/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Campaign</title>
       <link>/tags/campaign/</link>
@@ -76,13 +83,6 @@
       <link>/tags/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/tags/docker/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Event</title>
-      <link>/tags/event/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/tags/event/</guid>
       <description></description>
     </item>
     <item>
