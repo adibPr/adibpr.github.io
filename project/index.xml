@@ -13,56 +13,56 @@
       <link>/project/2403_talks_lookalike/</link>
       <pubDate>Sat, 16 Mar 2024 00:00:00 +0000</pubDate>
       <guid>/project/2403_talks_lookalike/</guid>
-      <description>I talked about campaign targeting, what it is, how to find the right audience using lookalike model, and implementation of several basic lookalike model approach. Slides and notes can be found here</description>
+      <description>&lt;p&gt;I talked about campaign targeting, what it is, how to find the right audience using lookalike model, and implementation of several basic lookalike model approach.&#xA;Slides and notes can be found &lt;a href=&#34;https://drive.google.com/drive/folders/1WN3YAjSzzrA9gP66t5IHcS1qBZ0gf5-K&#34;&gt;here&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Leveraging Telco Data Beyond Traditional Telco Business</title>
       <link>/project/231023_talks_thrive_dsi/</link>
       <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
       <guid>/project/231023_talks_thrive_dsi/</guid>
-      <description>This is a collaborative event from Thrive of Telkomsel with Data Science Indonesia. In this session, I talked about how we (INDICO) leverage telco data beyond traditional telco business. We explore the benefits of telco data, what it might contains, and what kind of potential application it can do to your business.</description>
+      <description>&lt;p&gt;This is a collaborative event from Thrive of Telkomsel with Data Science Indonesia.&#xA;In this session, I talked about how we (INDICO) leverage telco data beyond traditional telco&#xA;business.&#xA;We explore the benefits of telco data, what it might contains, and what kind of potential application&#xA;it can do to your business.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://bucket1.is3.cloudhost.id/blog/231023%20DSI%20-%20Thrive/AGS00235.jpg&#34; alt=&#34;My Presentation&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>RFM Segmentation for Finding The Best Customer</title>
       <link>/project/231014_talks_rfm_segment/</link>
       <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
       <guid>/project/231014_talks_rfm_segment/</guid>
-      <description>I talked about basic customer segmentation using RFM and clustering approach to find big spender customer, and how we deal with different type of customer. Slides can be found here</description>
+      <description>&lt;p&gt;I talked about basic customer segmentation using RFM and clustering approach to find big spender customer, and how we deal with different type of customer.&#xA;Slides can be found &lt;a href=&#34;https://drive.google.com/file/d/1-nn3QvKHVuTx5q-jwctARCZZn3-0JRg3/view?usp=sharing&#34;&gt;here&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Simple Daily Journal Prompt</title>
       <link>/project/03_journal_prompt/</link>
       <pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate>
       <guid>/project/03_journal_prompt/</guid>
-      <description>Over the past few years, I&amp;rsquo;ve developed a daily writing habit in my note-taking apps (I&amp;rsquo;m currently using Notion, having migrated from Evernote a few months ago). At first, I just write my daily feeling, what negative or positive emotions I currently feel, and the source of them. It helps me meditate on my life. Sometimes I even come up with a good quote or self-advice.&#xA;But writing about feeling alone might be boring sometimes, so I started to look for something different.</description>
+      <description>&lt;p&gt;Over the past few years, I&amp;rsquo;ve developed a daily writing habit in my note-taking apps (I&amp;rsquo;m currently using Notion, having migrated from Evernote a few months ago). At first, I just write my daily feeling, what negative or positive emotions I currently feel, and the source of them. It helps me meditate on my life. Sometimes I even come up with a good quote or self-advice.&lt;/p&gt;&#xA;&lt;p&gt;But writing about feeling alone might be boring sometimes, so I started to look for something different. I come up with a daily prompt, which is a set of questions that you could pick randomly each day and start exploring answers from that.&#xA;It&amp;rsquo;s super fun for me since I might spend the day wandering about the question. It&amp;rsquo;s not the question itself, but rather where the question takes me. Sometimes it takes me to the future, asking about my ideal life, sometime in the past, asking about my painful memory. It&amp;rsquo;s random every day, so I could learn a few things every day.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Data Visualization</title>
       <link>/project/231014_talks_dataviz/</link>
       <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
       <guid>/project/231014_talks_dataviz/</guid>
-      <description>I talked about basic data visualization, tips and technique. No recording published, but you can find the slides here.</description>
+      <description>&lt;p&gt;I talked about basic data visualization, tips and technique. No recording published, but you can find the slides &lt;a href=&#34;https://drive.google.com/file/d/1mxMMz0EZQVnTpWKZB2HvhNfzRkwm7Rt-/view?usp=sharing&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Jupyter notebook - S3 Blogging Platform</title>
       <link>/project/02_jupyter_gdrive/</link>
       <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
       <guid>/project/02_jupyter_gdrive/</guid>
-      <description>Markdown is a good format to write almost anything. But we as a data scientist, use Jupyter Notebook, a lot. We could do a very rapid experiment, with plot, data frame, etc. This makes me wonder, is it possible to turn a jupyter notes into a blog post? I actually try to do this at my current company, to create some sort of knowledge management platform for our research team.</description>
+      <description>&lt;p&gt;Markdown is a good format to write almost anything. But we as a data scientist, use Jupyter Notebook, a lot. We could do a very rapid experiment, with plot, data frame, etc. This makes me wonder, is it possible to turn a jupyter notes into a blog post? I actually try to do this at my current company, to create some sort of knowledge management platform for our research team.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My Simple Hugo Theme </title>
       <link>/project/01_site/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       <guid>/project/01_site/</guid>
-      <description>This website is built using hand crafted theme as a medium for me to learn Hugo theming. It&amp;rsquo;s not that beauty since I&amp;rsquo;m not a web developer, but I&amp;rsquo;ve learned so much about hugo and CSS/HTML in general. You can find the code in here.</description>
+      <description>&lt;p&gt;This website is built using hand crafted theme as a medium for me to learn &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; theming.&#xA;It&amp;rsquo;s not that beauty since I&amp;rsquo;m not a web developer, but I&amp;rsquo;ve learned so much about hugo and CSS/HTML in general.&#xA;You can find the code in &lt;a href=&#34;https://github.com/adibPr/adibpr.theme&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Computer Vision for Vehicle Detection</title>
       <link>/project/231014_talks_bisaai_vehicle/</link>
       <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
       <guid>/project/231014_talks_bisaai_vehicle/</guid>
-      <description>My talk about basic computer vision techniques to detect vehicle from a camera installed at the road. The full talk can be watched on Here</description>
+      <description>&lt;p&gt;My talk about basic computer vision techniques to detect vehicle from a camera installed at the road.&#xA;The full talk can be watched on &lt;a href=&#34;https://www.youtube.com/watch?v=zfGDaJm1g9s&amp;amp;feature=youtu.be&#34;&gt;Here&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

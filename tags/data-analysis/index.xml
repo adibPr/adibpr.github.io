@@ -13,21 +13,21 @@
       <link>/posts/20240219---rfm-analysis-post/</link>
       <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
       <guid>/posts/20240219---rfm-analysis-post/</guid>
-      <description>A good understanding of the customer is key to a successful business. Not all customers are created equally. Some (like me), might want the cheapest/free offer, others perhaps willing to pay more to get a premium service, and some might still doubt taking our full offer. Some might be happy with the product and thus keep using it, while others may be on the verge of churning due to various reasons.</description>
+      <description>&lt;p&gt;A good understanding of the customer is key to a successful business.&#xA;Not all customers are created equally. Some (like me), might want the cheapest/free offer, others perhaps willing to pay more to get a premium service, and some might still doubt taking our full offer.&#xA;Some might be happy with the product and thus keep using it, while others may be on the verge of churning due to various reasons.&#xA;Different customer needs different actions and treatments, and segmentation is one way to explore it.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Minimum Actionable Insight: Providing Value as a Data Scientist</title>
       <link>/posts/20240120---hierarchy-of-needs/</link>
       <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
       <guid>/posts/20240120---hierarchy-of-needs/</guid>
-      <description>I want to start by stating something not so obvious: not all company needs to add AI to their current business. When we consider the data science hierarchy of needs, AI utilization is placed at the top of the hierarchy, meaning its value will be visible if the other needs below it are accommodated (except of course when AI is the core business). This is true especially if our company is just getting started, or still trying to gain traction.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://bucket1.is3.cloudhost.id/blog/20240120_hierarchy_of_needs/Leonardo_Diffusion_XL_a_duck_working_as_a_data_scientist_looki_1.jpg&#34; alt=&#34;Mr. Duck working on his RFM analysis (generated with Leonardo AI)&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;I want to start by stating something not so obvious: not all company needs to add AI to their current business.&#xA;When we consider the data science hierarchy of needs, AI utilization is placed at the top of the hierarchy,&#xA;meaning its value will be visible if the other needs below it are accommodated (except of course when AI is the core business).&#xA;This is true especially if our company is just getting started, or still trying to gain traction.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cohort Analysis With Python</title>
       <link>/posts/20231120---cohort-analysis/</link>
       <pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
       <guid>/posts/20231120---cohort-analysis/</guid>
-      <description>Cohort analysis is one of the simple and effective tool to better understand how customer interact in business. We can look whether the customer are coming back, or whether their value are improved over time. A simple tools that should be on every data analytics toolbox. But first, what is a cohort?&#xA;What is cohort? The technical definition of cohort analysis is behavioral analytics that breaks data into relevant groups and observes how their behavior changes over time.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://bucket1.is3.cloudhost.id/blog/20231113_cohort/Leonardo_Diffusion_XL_Several_data_analysis_looking_at_cohort_0.jpg&#34; alt=&#34;Ilustration generated with Leonardo AI&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Cohort analysis is one of the simple and effective tool to better understand how customer interact in business.&#xA;We can look whether the customer are coming back, or whether their value are improved over time.&#xA;A simple tools that should be on every data analytics toolbox. But first, what is a cohort?&lt;/p&gt;&#xA;&lt;h1 id=&#34;what-is-cohort&#34;&gt;What is cohort?&lt;/h1&gt;&#xA;&lt;p&gt;The technical definition of cohort analysis is behavioral analytics that breaks data into relevant groups and observes how their behavior changes over time.&#xA;For example, a company might group their user based on their first registration, and observe how their interaction with the platform changes day, week, or month.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

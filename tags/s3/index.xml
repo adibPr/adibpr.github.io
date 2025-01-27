@@ -13,7 +13,7 @@
       <link>/project/02_jupyter_gdrive/</link>
       <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
       <guid>/project/02_jupyter_gdrive/</guid>
-      <description>Markdown is a good format to write almost anything. But we as a data scientist, use Jupyter Notebook, a lot. We could do a very rapid experiment, with plot, data frame, etc. This makes me wonder, is it possible to turn a jupyter notes into a blog post? I actually try to do this at my current company, to create some sort of knowledge management platform for our research team.</description>
+      <description>&lt;p&gt;Markdown is a good format to write almost anything. But we as a data scientist, use Jupyter Notebook, a lot. We could do a very rapid experiment, with plot, data frame, etc. This makes me wonder, is it possible to turn a jupyter notes into a blog post? I actually try to do this at my current company, to create some sort of knowledge management platform for our research team.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

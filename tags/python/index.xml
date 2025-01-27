@@ -13,28 +13,28 @@
       <link>/posts/20240219---rfm-analysis-post/</link>
       <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
       <guid>/posts/20240219---rfm-analysis-post/</guid>
-      <description>A good understanding of the customer is key to a successful business. Not all customers are created equally. Some (like me), might want the cheapest/free offer, others perhaps willing to pay more to get a premium service, and some might still doubt taking our full offer. Some might be happy with the product and thus keep using it, while others may be on the verge of churning due to various reasons.</description>
+      <description>&lt;p&gt;A good understanding of the customer is key to a successful business.&#xA;Not all customers are created equally. Some (like me), might want the cheapest/free offer, others perhaps willing to pay more to get a premium service, and some might still doubt taking our full offer.&#xA;Some might be happy with the product and thus keep using it, while others may be on the verge of churning due to various reasons.&#xA;Different customer needs different actions and treatments, and segmentation is one way to explore it.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cohort Analysis With Python</title>
       <link>/posts/20231120---cohort-analysis/</link>
       <pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
       <guid>/posts/20231120---cohort-analysis/</guid>
-      <description>Cohort analysis is one of the simple and effective tool to better understand how customer interact in business. We can look whether the customer are coming back, or whether their value are improved over time. A simple tools that should be on every data analytics toolbox. But first, what is a cohort?&#xA;What is cohort? The technical definition of cohort analysis is behavioral analytics that breaks data into relevant groups and observes how their behavior changes over time.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://bucket1.is3.cloudhost.id/blog/20231113_cohort/Leonardo_Diffusion_XL_Several_data_analysis_looking_at_cohort_0.jpg&#34; alt=&#34;Ilustration generated with Leonardo AI&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Cohort analysis is one of the simple and effective tool to better understand how customer interact in business.&#xA;We can look whether the customer are coming back, or whether their value are improved over time.&#xA;A simple tools that should be on every data analytics toolbox. But first, what is a cohort?&lt;/p&gt;&#xA;&lt;h1 id=&#34;what-is-cohort&#34;&gt;What is cohort?&lt;/h1&gt;&#xA;&lt;p&gt;The technical definition of cohort analysis is behavioral analytics that breaks data into relevant groups and observes how their behavior changes over time.&#xA;For example, a company might group their user based on their first registration, and observe how their interaction with the platform changes day, week, or month.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building Python Layer for AWS Lambda with Docker</title>
       <link>/posts/20230922---python-aws-layer/</link>
       <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
       <guid>/posts/20230922---python-aws-layer/</guid>
-      <description>The other day, I was building something with AWS Lambda that requires an additional package. Usually, AWS has provided some scientific packages such as scikit-learn and pandas as a Layer that is ready to use. Unfortunately, one of the packages that I need (seaborn) isn&amp;rsquo;t available yet, so in order to use it in my function, I need to create a Layer manually.&#xA;Usually, this is pretty straightforward, all you need to do is to install the package inside a folder and zip it.</description>
+      <description>&lt;p&gt;The other day, I was building something with &lt;a href=&#34;https://aws.amazon.com/lambda/&#34;&gt;AWS Lambda&lt;/a&gt; that requires an additional package.&#xA;Usually, AWS has provided some scientific packages such as &lt;a href=&#34;https://scikit-learn.org/&#34;&gt;scikit-learn&lt;/a&gt; and &lt;a href=&#34;https://pandas.pydata.org/&#34;&gt;pandas&lt;/a&gt; as a Layer that is ready to use.&#xA;Unfortunately, one of the packages that I need (&lt;a href=&#34;https://seaborn.pydata.org/&#34;&gt;seaborn&lt;/a&gt;) isn&amp;rsquo;t available yet, so in order to use it in my function, I need to create a Layer manually.&lt;/p&gt;&#xA;&lt;p&gt;Usually, this is pretty straightforward, all you need to do is to install the package inside a folder and zip it. The command to run it:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Get Modified Files Within Two Snapshot</title>
       <link>/posts/20220602-get-modified-files-within-two-snapshot/</link>
       <pubDate>Thu, 02 Jun 2022 00:00:00 +0000</pubDate>
       <guid>/posts/20220602-get-modified-files-within-two-snapshot/</guid>
-      <description>To make my blogging habit a little bit easier, I create a tool to easily convert my jupyter notebooks to markdown that could be parsed into Hugo, called pynote2mds3 that use nbconvert to convert and upload any image into S3. However, I soon find out that I need to manually run this command for each of my new posts and I kind of looking for a way to automate that. The solution is using make.</description>
+      <description>&lt;p&gt;To make my blogging habit a little bit easier, I create a tool to easily convert my jupyter notebooks to markdown that could be parsed into &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;, called &lt;a href=&#34;https://github.com/adibPr/pynote2mds3/&#34;&gt;pynote2mds3&lt;/a&gt; that use &lt;code&gt;nbconvert&lt;/code&gt; to convert and upload any image into S3. However, I soon find out that I need to manually run this command for each of my new posts and I kind of looking for a way to automate that. The solution is using &lt;code&gt;make&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -13,7 +13,7 @@
       <link>/posts/20220620-significance-test/</link>
       <pubDate>Mon, 20 Jun 2022 00:00:00 +0000</pubDate>
       <guid>/posts/20220620-significance-test/</guid>
-      <description>The main idea is we need to know whether this distribution is more likely to happen from another distribution with a level of p. So w need three things:&#xA;The first distribution (base) and its parameter The second distribution (comparator) and its parameter A limit/threshold for which we could safely say this is different. The Z - Test The T-test is for small use case ≤ 30, whereas the z-test is for the normal case.</description>
+      <description>&lt;p&gt;The main idea is we need to know whether this distribution is more likely to happen from another distribution with a level of p. So w need three things:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;The first distribution (base) and its parameter&lt;/li&gt;&#xA;&lt;li&gt;The second distribution (comparator) and its parameter&lt;/li&gt;&#xA;&lt;li&gt;A limit/threshold for which we could safely say this is different.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;the-z---test&#34;&gt;The Z - Test&lt;/h3&gt;&#xA;&lt;p&gt;The T-test is for small use case ≤ 30, whereas the z-test is for the normal case. Forget about the T-test. The condition for the T-test:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
