@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Aws on Adib.notes</title>
-    <link>/tags/aws/</link>
-    <description>Recent content in Aws on Adib.notes</description>
+    <title>Spark on Adib.notes</title>
+    <link>/tags/spark/</link>
+    <description>Recent content in Spark on Adib.notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 11 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/spark/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Run a Process Across EMR Nodes</title>
       <link>/posts/20250211---run-process-across-emr/</link>
       <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
       <guid>/posts/20250211---run-process-across-emr/</guid>
       <description>&lt;p&gt;When ingesting a large amount of data, we usually use a parallel processing engine for efficiency, like Spark for efficiency.&#xA;Taking data from a database with spark is relatively straightforward, however, in our situation, it happens that our target database is behind a private network and could only be reached via a bastion box.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://bucket1.is3.cloudhost.id/blog/20250211%20-%20Run%20Process%20across%20EMR/20250211-run_command_across_emr.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;bootstrap-approach&#34;&gt;Bootstrap Approach&lt;/h2&gt;&#xA;&lt;p&gt;Now, one way to do it is to set up a &lt;a href=&#34;https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-bootstrap.html&#34;&gt;bootstrap&lt;/a&gt; action when creating the EMR, to include installation of the VPN and to actually run it (either as a service or inside a terminal multiplexer like &lt;a href=&#34;https://github.com/tmux/tmux&#34;&gt;tmux&lt;/a&gt;).&#xA;The problem with this approach is that it will always be on. So, in case we have to connect multiple databases with different bastion box, this approach will not work.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Building Python Layer for AWS Lambda with Docker</title>
-      <link>/posts/20230922---python-aws-layer/</link>
-      <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>/posts/20230922---python-aws-layer/</guid>
-      <description>&lt;p&gt;The other day, I was building something with &lt;a href=&#34;https://aws.amazon.com/lambda/&#34;&gt;AWS Lambda&lt;/a&gt; that requires an additional package.&#xA;Usually, AWS has provided some scientific packages such as &lt;a href=&#34;https://scikit-learn.org/&#34;&gt;scikit-learn&lt;/a&gt; and &lt;a href=&#34;https://pandas.pydata.org/&#34;&gt;pandas&lt;/a&gt; as a Layer that is ready to use.&#xA;Unfortunately, one of the packages that I need (&lt;a href=&#34;https://seaborn.pydata.org/&#34;&gt;seaborn&lt;/a&gt;) isn&amp;rsquo;t available yet, so in order to use it in my function, I need to create a Layer manually.&lt;/p&gt;&#xA;&lt;p&gt;Usually, this is pretty straightforward, all you need to do is to install the package inside a folder and zip it. The command to run it:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
