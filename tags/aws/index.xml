@@ -6,8 +6,15 @@
     <description>Recent content in Aws on Adib.notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 12 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS User Group Meetup - Scalable Big Data ETL with Spark and AWS StepFunction</title>
+      <link>/project/2504_talk_aws/</link>
+      <pubDate>Mon, 12 May 2025 00:00:00 +0000</pubDate>
+      <guid>/project/2504_talk_aws/</guid>
+      <description>&lt;p&gt;In this online session, I presented on using EMR Spark to ingest large datasets and orchestrating them with AWS Step Functions.&#xA;The presentation covered basic Step Functions commands, including branching, parameter parsing, and connecting to Athena.&lt;/p&gt;&#xA;&lt;p&gt;The session recording is available online &lt;a href=&#34;https://www.youtube.com/watch?v=789426nxt-Y&amp;amp;list=PLAi0McOwHEQ9XuO7FdasyQSmo7PBNJaIf&amp;amp;index=4&#34;&gt;here&lt;/a&gt;, and the slides can be viewed &lt;a href=&#34;https://docs.google.com/presentation/d/1hsYbScTWAXMQRCS0RB6zln09mnDggNmk5CehCfMNSKc/edit?usp=sharing&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Run a Process Across EMR Nodes</title>
       <link>/posts/20250211---run-process-across-emr/</link>

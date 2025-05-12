@@ -6,13 +6,34 @@
     <description>Recent content in Tags on Adib.notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 12 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Aws</title>
       <link>/tags/aws/</link>
-      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 May 2025 00:00:00 +0000</pubDate>
       <guid>/tags/aws/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bigdata</title>
+      <link>/tags/bigdata/</link>
+      <pubDate>Mon, 12 May 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/bigdata/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spark</title>
+      <link>/tags/spark/</link>
+      <pubDate>Mon, 12 May 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/spark/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Talks</title>
+      <link>/tags/talks/</link>
+      <pubDate>Mon, 12 May 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/talks/</guid>
       <description></description>
     </item>
     <item>
@@ -27,13 +48,6 @@
       <link>/tags/python/</link>
       <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
       <guid>/tags/python/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Spark</title>
-      <link>/tags/spark/</link>
-      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>/tags/spark/</guid>
       <description></description>
     </item>
     <item>
@@ -55,13 +69,6 @@
       <link>/tags/lookalike/</link>
       <pubDate>Sat, 16 Mar 2024 00:00:00 +0000</pubDate>
       <guid>/tags/lookalike/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Talks</title>
-      <link>/tags/talks/</link>
-      <pubDate>Sat, 16 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/talks/</guid>
       <description></description>
     </item>
     <item>
