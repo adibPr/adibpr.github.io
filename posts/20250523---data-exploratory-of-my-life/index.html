@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-sccale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-grid.min.css" integrity="sha512-ZuRTqfQ3jNAKvJskDAU/hxbX1w25g41bANOVd1Co6GahIe2XjM6uVZ9dh0Nt3KFCOA061amfF2VeL60aJXdwwQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-reboot.min.css" integrity="sha512-ZHQv/ue+hZQ+Jd+JKhxic17TUraZ9UwS6G7RcwSrQEE9j/m/AGRwj1OmYrkP43H0B/Wf0pg3hfbHCMAS6SGHOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="../../css/mine.css">
+
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+  <script src="../../js/theme.js"></script>
+  <title>Adib.notes|Data Exploratory of My Life (with LLM)</title>
+
+</head>
+<body>
+        <div class="containers">
+            <div id="navigation"><div id="mynav">
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="../../"> Home </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../tags"> Tags </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../project"> Project & Talks </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../about"> About </a>
+    </li>
+  </ul>
+</div>
+</div>
+            <div id="lsidebar"></div>
+            <div id="main">
+  <center>
+    <h1>Data Exploratory of My Life (with LLM)</h1>
+    
+
+<time datetime="2025-05-23">May 23, 2025</time>
+
+
+    
+    
+    
+    
+        
+    
+    <br>
+    
+      
+        
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="../../tags/python">python</a>
+      
+        
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="../../tags/dea">dea</a>
+      
+        
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="../../tags/llm">llm</a>
+      
+    
+  </center>
+  <br>
+
+  <div id="content">
+    <p>As someone who works with data daily, have you ever wondered what insights you could gain if you collected and analyzed your own life data? In today&rsquo;s age, everything is being recorded: your search history, your music, your groceries, even your location. Imagine if we could find an optimum path for our commute, uncover different hidden personas within our lives, or simply just find out where all the time goes.</p>
+<p>This is my attempt to uncover some of that, starting with browser history.</p>
+<h2 id="objective">Objective</h2>
+<p>Like any other analysis, we need to state the objective first. Personally, I want to know where I spend my time.</p>
+<p>I have a goal to dedicate one hour each night (around 9 PM - 10 PM) to learning and improving my skills. However, lately, I feel like I haven&rsquo;t been leveraging that time slot effectively. So, I wonder how much time I&rsquo;ve been spending on entertainment.</p>
+<h1 id="data">Data</h1>
+<p>Data collection is quite straightforward. Since I use <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a>, my browse history is stored in a SQLite file named places.sqlite. Its location depends on your browser configuration, but you can refer to <a href="https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data">this documentation</a> to find it.</p>
+<p>Once located, first copy the file to a new directory. Then, we can use the sqlite3 command-line tool to inspect the data.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sqlite3 places.sqlite
+</span></span><span class="line"><span class="cl">.table
+</span></span></code></pre></div><p>The <code>.table</code> command will display the available tables. While there are many, for this analysis, we will focus on two: <code>moz_places</code>, which describes the URL, and <code>moz_historyvisits</code>, which records the time of visits.</p>
+<p>I used the following SQL query to generate the necessary data:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-SQL" data-lang="SQL"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">moz_places</span><span class="p">.</span><span class="n">url</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">moz_places</span><span class="p">.</span><span class="n">title</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">datetime</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="n">moz_historyvisits</span><span class="p">.</span><span class="n">visit_date</span><span class="o">/</span><span class="mi">1000000</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;unixepoch&#39;</span><span class="p">),</span><span class="w"> </span><span class="s1">&#39;+7 hour&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">visit_time</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">FROM</span><span class="w"> </span><span class="n">moz_places</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">JOIN</span><span class="w"> </span><span class="n">moz_historyvisits</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">moz_places</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">moz_historyvisits</span><span class="p">.</span><span class="n">place_id</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">WHERE</span><span class="w"> </span><span class="n">datetime</span><span class="p">(</span><span class="n">moz_historyvisits</span><span class="p">.</span><span class="n">visit_date</span><span class="o">/</span><span class="mi">1000000</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;unixepoch&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="nb">date</span><span class="p">(</span><span class="s1">&#39;2024-01-01&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">-- convert to actual date from epoch
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">and</span><span class="w"> </span><span class="n">datetime</span><span class="p">(</span><span class="n">moz_historyvisits</span><span class="p">.</span><span class="n">visit_date</span><span class="o">/</span><span class="mi">1000000</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;unixepoch&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nb">date</span><span class="p">(</span><span class="s1">&#39;2025-01-01&#39;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">visit_time</span><span class="w"> </span><span class="k">ASC</span><span class="w">
+</span></span></span></code></pre></div><p>Or you could use python to read it as a pandas dataframe.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sqlite3</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">datetime</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;data/places.sqlite&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">con</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cursor</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">query</span> <span class="o">=</span> <span class="s2">&#34;SELECT moz_places.url, moz_places.title, visit_time ...&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">con</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;visit_time&#39;</span><span class="p">])</span>
+</span></span></code></pre></div><p>Once data is ready, we could start do the exploration.</p>
+<h1 id="exploration">Exploration</h1>
+<p>The first thing I want to look at is the distribution of my activity per hour. I just need to aggregate by the hour and count the number of activities.
+<img src="https://is3.cloudhost.id/bucket1/blog/20250525%20-%20Life%20Analysis/03_total_activity_combine.png" alt="This">
+This seems to make sense. From an hourly point of view, I typically work from around 8 AM, take a one-hour break, then continue working until around 5 PM. After some family time, I resume learning around 8 or 9 PM.</p>
+<p>If we look at it based on weekdays, it&rsquo;s safe to assume my activity on workdays is significantly higher compared to my weekends.</p>
+<h2 id="classification">Classification</h2>
+<p>To find out where my time goes, I need to categorize each site as either entertainment, work, or others. Typically, this involves building some kind of vocabulary or using regex (or, if you prefer modeling, some AI/ML algorithm). This will have some inaccuracies, but luckily it&rsquo;s 2025, and we have LLMs to handle this kind of task in one shot.</p>
+<p>The idea is to let an LLM classify the URL for us. I&rsquo;ve decided to use seven categories:</p>
+<ul>
+<li>Entertainment</li>
+<li>Work</li>
+<li>Personal</li>
+<li>News &amp; Information</li>
+<li>Shopping</li>
+<li>Learning</li>
+<li>Communication</li>
+<li>Unknown</li>
+</ul>
+<p>However, any number of categories will be fine. Now, in order to categorize it, we could analyze it based on the URL, its content, or both. But since I want to simplify things, I&rsquo;ve decided to use just the main domain URL (e.g., Youtube.com, instead of <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">youtube.com/watch?v=dQw4w9WgXcQ</a>). So, first, we need to extract the main domain from all the URLs we have.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">tldextract</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_clean_url</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ext</span> <span class="o">=</span> <span class="n">tldextract</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s1">&#39;.&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">_</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="p">[</span><span class="n">ext</span><span class="o">.</span><span class="n">subdomain</span><span class="p">,</span> <span class="n">ext</span><span class="o">.</span><span class="n">domain</span><span class="p">,</span> <span class="n">ext</span><span class="o">.</span><span class="n">suffix</span><span class="p">]</span> <span class="k">if</span> <span class="n">_</span> <span class="ow">and</span> <span class="n">_</span> <span class="o">!=</span> <span class="s1">&#39;www&#39;</span><span class="p">])</span> 
+</span></span></code></pre></div><p>Then, since I&rsquo;m interested in my night activity, I&rsquo;ll filter the data only for events from 8 PM and above.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df_night</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;visit_time_hour&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">20</span><span class="p">]</span>
+</span></span></code></pre></div><p>Next, by using <code>langchain</code>, we could connect to Gemini to classify the main domain URL.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">langchain_google_genai</span> <span class="kn">import</span> <span class="n">ChatGoogleGenerativeAI</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span><span class="p">,</span> <span class="n">find_dotenv</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">langchain.schema</span> <span class="kn">import</span> <span class="n">HumanMessage</span><span class="p">,</span> <span class="n">SystemMessage</span><span class="p">,</span> <span class="n">AIMessage</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">load_dotenv</span><span class="p">(</span><span class="n">find_dotenv</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="n">llm</span> <span class="o">=</span> <span class="n">ChatGoogleGenerativeAI</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s1">&#39;gemini-2.0-flash&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">messages</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="n">SystemMessage</span><span class="p">(</span><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    You are a URL classifier. You are given a URL. Classify the URL into one of the following categories:
+</span></span></span><span class="line"><span class="cl"><span class="s2">    - Entertainment
+</span></span></span><span class="line"><span class="cl"><span class="s2">    - Work
+</span></span></span><span class="line"><span class="cl"><span class="s2">    - Personal
+</span></span></span><span class="line"><span class="cl"><span class="s2">    - News &amp; Information
+</span></span></span><span class="line"><span class="cl"><span class="s2">    - Shopping
+</span></span></span><span class="line"><span class="cl"><span class="s2">    - Learning
+</span></span></span><span class="line"><span class="cl"><span class="s2">    - Communication
+</span></span></span><span class="line"><span class="cl"><span class="s2">    - Unknown
+</span></span></span><span class="line"><span class="cl"><span class="s2">Classify only based on the content, purpose, or common use of the website.
+</span></span></span><span class="line"><span class="cl"><span class="s2">Answer it as JSON, and the input might be a list of URL, joined by some string (like &#34;|&#34;). 
+</span></span></span><span class="line"><span class="cl"><span class="s2">The output will have keys : &#34;category&#34;, and &#34;URL&#34; for the original URL.
+</span></span></span><span class="line"><span class="cl"><span class="s2">Split for each URL, and return in the format 1 JSON per line.
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">Example:
+</span></span></span><span class="line"><span class="cl"><span class="s2">Input: https://www.netflix.com
+</span></span></span><span class="line"><span class="cl"><span class="s2">Output: {&#34;category&#34;: &#34;Entertainment&#34;, &#34;URL&#34;: &#34;https://www.netflix.com&#34;}
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">q</span> <span class="o">=</span> <span class="n">HumanMessage</span><span class="p">(</span><span class="s2">&#34;&#34;&#34;This is the list of URLs you need to detect. The url is seperated by string pipe (|)</span><span class="se">\n</span><span class="s2">&#34;&#34;&#34;</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df_night</span><span class="p">[</span><span class="s1">&#39;url_clean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">result</span> <span class="o">=</span> <span class="n">llm</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">messages</span> <span class="o">+</span> <span class="p">[</span><span class="n">q</span><span class="p">])</span>
+</span></span></code></pre></div><p>For one-shot prompting (or any other prompt), it&rsquo;s better to have an example of input and expected output so the result is as expected. To make the process easier, I run it in batches, with 100 URLs per prompt.</p>
+<p>This code will generate a class for each URL. We can then group them (based on date, for example) to conduct further analysis.
+The first visualization I had in mind shows the frequency of my entertainment activities. Using <a href="https://github.com/tomkwok/calplot">calplot</a>:</p>
+<p><img src="https://is3.cloudhost.id/bucket1/blog/20250525%20-%20Life%20Analysis/04_calplot_entertainment.png" alt="url"></p>
+<p>It seems my entertainment peaked in January and around November, with the majority of high-volume entertainment occurring on Sundays. Luckily, the frequency is quite sporadic; no inherent pattern could be found.</p>
+<p>Then to find out the average % of my activities:
+<img src="https://is3.cloudhost.id/bucket1/blog/20250525%20-%20Life%20Analysis/05_weekday_distribution.png" alt="image"></p>
+<p>Saturday is when I spend my nighttime doing entertainment. Surprisingly, my Sunday percentage is the same as any other weekday. Maybe it&rsquo;s because I&rsquo;m already thinking about work.</p>
+<p>Finally, to see what actual site I frequently visit, we could use wordcloud to visualized it.</p>
+<p><img src="https://is3.cloudhost.id/bucket1/blog/20250525%20-%20Life%20Analysis/06_wordcloud.png" alt="wordlcoud"></p>
+<p>Based on this thing I conclude that there are several things that I spend more time on:</p>
+<ol>
+<li>Social media (Youtube Short, Reddit)</li>
+<li>Card Game (Yu Gi Oh)</li>
+<li>Dota (not playing, just keep up with the game)</li>
+</ol>
+<h1 id="conclusion">Conclusion</h1>
+<p>Yep, playing card games has become my go-to entertainment recently, but that interest has fortunately faded away. Unfortunately, the &ldquo;scrolling effect&rdquo; of YouTube might not disappear anytime soon, so I need to develop a good mechanism to fight back and keep my time for what I intentionally want: learning.</p>
+<p>This data only represents unique URL visits and might not reflect the actual amount of time I spend on each site, but it&rsquo;s still a good start.
+I&rsquo;ll probably do more fun analyses like this, using different data, such as from <a href="https://activitywatch.net/">ActivityWatch</a> which I&rsquo;ve been using for a few months.</p>
+
+  </div>
+
+  <div class="post-end-marker">. . .</div>
+
+</div>
+            <div id="rsidebar"></div>
+            <div id="theme"> 
+                <a href="#" class="nav-link" onclick="changeTheme()"><i data-feather="sun"></i></a>
+            </div>
+            <div id="footer"><script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.1/feather.min.js" integrity="sha512-4lykFR6C2W55I60sYddEGjieC2fU79R7GUtaqr3DzmNbo0vSaO1MfUjMoTFYYuedjfEix6uV9jVTtRCSBU/Xiw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  feather.replace()
+</script>
+<script data-goatcounter="https://app.pradib.my.id/goatcounter/count"
+        async src="//app.pradib.my.id/goatcounter/count.js"></script>
+</div>
+        </div>
+    </body>
+</html>

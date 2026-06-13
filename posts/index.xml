@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Adib.notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Exploratory of My Life (with LLM)</title>
+      <link>/posts/20250523---data-exploratory-of-my-life/</link>
+      <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>
+      <guid>/posts/20250523---data-exploratory-of-my-life/</guid>
+      <description>&lt;p&gt;As someone who works with data daily, have you ever wondered what insights you could gain if you collected and analyzed your own life data? In today&amp;rsquo;s age, everything is being recorded: your search history, your music, your groceries, even your location. Imagine if we could find an optimum path for our commute, uncover different hidden personas within our lives, or simply just find out where all the time goes.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Run a Process Across EMR Nodes</title>
       <link>/posts/20250211---run-process-across-emr/</link>
