@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Lato", sans-serif;
     margin-bottom: 1rem;
     background-color: var(--background-color);
     color: var(--font-color);
@@ -18,6 +18,7 @@ a,
 #theme .nav-link {
     color: var(--link-color);
     text-decoration: none; /* due to using bootstrap 5 */
+    cursor: pointer;
 }
 a:hover {
     text-decoration: underline;
@@ -29,7 +30,7 @@ p {
 
 img {
     max-width: 100%;
-    max-height: 100%;
+    height: auto;
 }
 pre code {
     color: var(--pre-code-color);
@@ -43,7 +44,7 @@ pre code {
 #mynav {
     padding-top: 1.5em;
     padding-bottom: 1.5em;
-    font-family: 'Ubuntu';
+    font-family: 'Raleway', sans-serif;
     font-weight: 500;
 }
 
@@ -84,7 +85,7 @@ pre code {
 #theme {
     padding-top: 2em;
     padding-bottom: 1.5em;
-    font-family: 'Alegreya';
+    font-family: 'Raleway', sans-serif;
     grid-area: theme;
 }
 
@@ -93,30 +94,75 @@ pre code {
 }
 
 
-/* Table of Contencts format */
-#toc {
-    width: 100%;
-}
-.toc-title {
-    margin-bottom: 0em;
-    /*font-weight: 200;*/
-    line-height: 2;
-    width: 85%;
-    color: blue;
+/* Post list grouped by year */
+.year-heading {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-size: 1.3rem;
+    color: var(--font-color);
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.2em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
 }
 
-.toc-date {
-    width: 15%;
-    font-size: 0.7rem;
-    text-align: right;
+#main h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5em 0;
+}
+
+.post-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    line-height: 2;
+}
+
+.post-title {
+    color: var(--link-color);
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 1em;
+}
+
+.post-title:hover {
+    text-decoration: underline;
+}
+
+.post-date {
+    font-size: 0.8rem;
+    color: var(--font-color);
+    opacity: 0.7;
+    white-space: nowrap;
 }
 
 #content {
     line-height: 1.6;
 }
 
-div:has(> .dataframe){
+#content img {
+    display: block;
+    margin: 1.5em auto;
+    max-height: 25vw;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+#content > div:has(.dataframe) {
     overflow-x: auto;
+    max-width: 100%;
+}
+
+#content > div:has(.dataframe) > table {
+    margin: 0 auto;
 }
 .dataframe {
     font-size: 0.9em;
@@ -124,14 +170,17 @@ div:has(> .dataframe){
 }
 
 
-.dataframe > thead, th {
-    background-color: #D3D3D3;
+.dataframe th {
+    background-color: #444;
+    color: #fff;
     text-align: center !important;
     padding: 5px 1em 5px 1em;
 }
 
 #content>h1,h2,h3,h4,h5,h6 {
     margin-top: 1em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
 }
 
 #content > div.highlight {
@@ -177,6 +226,14 @@ div:has(> .dataframe){
     margin-bottom: 0em;
 }
 
+.post-end-marker {
+    text-align: center;
+    margin: 3em 0;
+    letter-spacing: 0.3em;
+    opacity: 0.5;
+    color: var(--font-color);
+}
+
 /* Adaptive */
 @media only screen and (max-width: 550px){
     .containers {
@@ -189,12 +246,12 @@ div:has(> .dataframe){
         grid-gap: 0.2rem;
     }
 
-    .toc-title {
-        width: 70%;
+    .post-item {
+        flex-wrap: wrap;
     }
 
-    .toc-date {
-        width: 30%;
+    .post-title {
+        white-space: normal;
     }
 
     #main {
@@ -208,7 +265,7 @@ div:has(> .dataframe){
 /* Overwrite Bootstrap  */
 /* For pagination */
 .page-link {
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Lato", sans-serif;
     font-size: 0.9rem;
     color: var(--link-color);
     background-color: #fff0;
