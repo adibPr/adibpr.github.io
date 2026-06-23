@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-sccale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-grid.min.css" integrity="sha512-ZuRTqfQ3jNAKvJskDAU/hxbX1w25g41bANOVd1Co6GahIe2XjM6uVZ9dh0Nt3KFCOA061amfF2VeL60aJXdwwQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-reboot.min.css" integrity="sha512-ZHQv/ue+hZQ+Jd+JKhxic17TUraZ9UwS6G7RcwSrQEE9j/m/AGRwj1OmYrkP43H0B/Wf0pg3hfbHCMAS6SGHOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="../../css/mine.css">
+
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+  <script src="../../js/theme.js"></script>
+  <title>Adib.notes|Superset Migration from Version 2 to 6</title>
+
+</head>
+<body>
+        <div class="containers">
+            <div id="navigation"><div id="mynav">
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="../../"> Home </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../tags"> Tags </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../project"> Project & Talks </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../about"> About </a>
+    </li>
+  </ul>
+</div>
+</div>
+            <div id="lsidebar"></div>
+            <div id="main">
+  <center>
+    <h1>Superset Migration from Version 2 to 6</h1>
+    
+
+<time datetime="2026-06-23">Jun 23, 2026</time>
+
+
+    
+    
+    
+    
+        
+    
+    <br>
+    
+      
+        
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="../../tags/superset">superset</a>
+      
+        
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="../../tags/aws">aws</a>
+      
+        
+        <a class="btn btn-sm btn-outline-success tag-btn tag" href="../../tags/docker">docker</a>
+      
+    
+  </center>
+  <br>
+
+  <div id="content">
+    <h1 id="background">Background</h1>
+<p>It&rsquo;s been 4 years since we deployed our BI tools <a href="https://superset.apache.org/">Superset</a>.
+We haven&rsquo;t touched it since, because we are kind of satisfied (more like no major concern) with the current version, especially with our data having relatively low volume.
+It could display some charts, run some queries, and that&rsquo;s it. Nothing fancy.</p>
+<p>But I think these now become a security risk, not to mention other performance improvements we will get, so I allocated one full working day just to migrate it. Here&rsquo;s the recap in case anyone in the same position as me.</p>
+<h1 id="the-process">The Process</h1>
+<p>Since we can&rsquo;t just replace the <code>Docker</code> file definition from <code>apache/superset:2.1.0</code> to <code>apache/superset:6.0.0</code> (due to not being a direct update, and the risk of destroying our current metadata table), we need to do a sequential upgrade: from 2 to 3 to 4 up to 6.</p>
+<p>The thing is, we need not only to update the Docker image, but also our metadata table.
+Our superset instance is being hosted on ECS, with RDS PostgreSQL as the database.
+So in this case, we have to duplicate the production database first into development, sequentially update from 2 to 6, pointing to this local database, then after we confirm our migration is done, we move it back (the db and the image) to the production environment.
+Specifically:</p>
+<ol>
+<li>
+<p>Backup/dump the current database production. We need the exact replica of our database production to follow us through migration. We need a server with the same VPC as the database and run:</p>
+<p><code>docker run -it --rm -v $(pwd)/backup postgres:17 pg_dump -h &lt;db-prod-address&gt; -U &lt;user&gt; -d &lt;db&gt; -F c -b -v -f /backup/superset.dump</code></p>
+</li>
+</ol>
+<p>I&rsquo;m using docker since I have local installation of postgres, and it&rsquo;s different version, so it&rsquo;s much easier to create one run-off container for this. This command will create a file in <code>$(pwd)/backup</code>, a binary dump (compressed).</p>
+<ol start="2">
+<li>
+<p>Now copy this file to our dev environment, spin up a new postgre database, and restore this data into that new database. Again, using docker:</p>
+<pre tabindex="0"><code>docker run -d \
+    --name pg_superset \
+    -p 5432:5432 \
+    -v $(pwd)/backup:/backup \
+    -e POSTGRES_DB=&lt;db&gt; \
+    -e POSTGRES_USER=&lt;user&gt; \
+    -e POSTGRES_PASSWORD=&lt;password&gt; \ 
+    postgres:17
+</code></pre><p>This just will create the database instance. To restore it, use:</p>
+<p><code>docker exec -it pg_superset pg_restore -U &lt;user&gt; -d &lt;db&gt; -v /backup/superset.dump</code></p>
+</li>
+<li>
+<p>Finally the sequential update. For each version, we will build a docker image pointing to this postgre database and run it. The superset image will automatically migrate any current configuration into the latest version. If the progress runs smoothly, we change our Dockerfile, use the next version, and repeat the process. For example, our base Dockerfile (version 2.0.0), we have:</p>
+<pre tabindex="0"><code>FROM apache/superset:2.1.0
+
+USER root
+COPY requirements.txt /app/
+RUN pip install -r /app/requirements.txt
+
+COPY superset_config.py /app/
+ENV SUPERSET_CONFIG_PATH /app/superset_config.py
+...
+
+COPY superset-init.sh /app/superset-init.sh
+RUN chmod +x /app/superset-init.sh
+
+USER superset
+ENTRYPOINT [ &#34;/app/superset-init.sh&#34; ]
+</code></pre><p>Now, you need two step:</p>
+<p>a. Build your image. <code>docker build -t superset:2.0 .</code></p>
+<p>b. Run the superset.</p>
+<pre tabindex="0"><code>docker run --name superset 
+    --add-host=host.docker.internal:host-gateway 
+    -e DATABASE_HOST=host.docker.internal 
+    -e DATABSE_PORT=5432 
+    -e DATABASE_DB=superset &lt;other env&gt; 
+    superset:2.0
+</code></pre><p>Note that we use database host <code>host.docker.internal</code> to reference our backup postgre.</p>
+</li>
+</ol>
+<p>We repeat the process iteratively, by changing the Dockerfile then running the same command.
+One thing we note that on version 5.0 forward, there are some changes regarding how Dockerfile for superset is created.</p>
+<p>First, Superset using uv to manage their installation. So instead of normal pip, we have to use <code>uv pip install</code>.</p>
+<p>Secondly, we now have to move the <code>superset_config.py</code> into a new location: <code>/app/pythonpath/superset_config.py</code>.</p>
+<p>So, our Dockerfile for version 5.0 forward would be:</p>
+<pre tabindex="0"><code>FROM apache/superset:5.0.0
+...
+COPY requirements.txt /app/requirements.txt
+RUN uv pip install --no-cache-dir -r /app/requirements.txt
+COPY superset_config.py /app/pythonpath/superset_config.py
+...
+</code></pre><p>After confirming (when running using docker run for the latest version), we finally have a Docker image for version 6.0 along with postgre database that is up to date and in sync. The final step would be dumping the data into the postgres:</p>
+<pre tabindex="0"><code>docker_exec -t -e PGPASSWORD=&lt;password&gt; pg_superset pg_dump -U admin -d &lt;db&gt; &gt; backup_v6.sql
+</code></pre><p>Then, on production, we need to restore this (preferably into a new database), then deploy the latest image (version 6) pointing to this new database.</p>
+<h1 id="the-result">The Result</h1>
+<p><img src="https://bucket1.is3.cloudhost.id/blog/20260617%20-%20Superset%202%20to%206/20260623-superset-migrate.png" alt="superset-img"></p>
+<p>A successful grunt work.</p>
+
+  </div>
+
+  <div class="post-end-marker">. . .</div>
+
+</div>
+            <div id="rsidebar"></div>
+            <div id="theme"> 
+                <a href="#" class="nav-link" onclick="changeTheme()"><i data-feather="sun"></i></a>
+            </div>
+            <div id="footer"><script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.1/feather.min.js" integrity="sha512-4lykFR6C2W55I60sYddEGjieC2fU79R7GUtaqr3DzmNbo0vSaO1MfUjMoTFYYuedjfEix6uV9jVTtRCSBU/Xiw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  feather.replace()
+</script>
+<script data-goatcounter="https://app.pradib.my.id/goatcounter/count"
+        async src="//app.pradib.my.id/goatcounter/count.js"></script>
+</div>
+        </div>
+    </body>
+</html>
