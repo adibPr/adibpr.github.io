@@ -6,8 +6,36 @@
     <description>Recent content in Tags on Adib.notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Event</title>
+      <link>/tags/event/</link>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/event/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Llm</title>
+      <link>/tags/llm/</link>
+      <pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/llm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rag</title>
+      <link>/tags/rag/</link>
+      <pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/rag/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Talks</title>
+      <link>/tags/talks/</link>
+      <pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/talks/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Aws</title>
       <link>/tags/aws/</link>
@@ -37,13 +65,6 @@
       <description></description>
     </item>
     <item>
-      <title>Llm</title>
-      <link>/tags/llm/</link>
-      <pubDate>Sun, 18 May 2025 00:00:00 +0000</pubDate>
-      <guid>/tags/llm/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Python</title>
       <link>/tags/python/</link>
       <pubDate>Sun, 18 May 2025 00:00:00 +0000</pubDate>
@@ -65,24 +86,10 @@
       <description></description>
     </item>
     <item>
-      <title>Talks</title>
-      <link>/tags/talks/</link>
-      <pubDate>Mon, 12 May 2025 00:00:00 +0000</pubDate>
-      <guid>/tags/talks/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Emr</title>
       <link>/tags/emr/</link>
       <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
       <guid>/tags/emr/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Event</title>
-      <link>/tags/event/</link>
-      <pubDate>Sat, 23 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/event/</guid>
       <description></description>
     </item>
     <item>

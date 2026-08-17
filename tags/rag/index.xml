@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Llm on Adib.notes</title>
-    <link>/tags/llm/</link>
-    <description>Recent content in Llm on Adib.notes</description>
+    <title>Rag on Adib.notes</title>
+    <link>/tags/rag/</link>
+    <description>Recent content in Rag on Adib.notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 25 Jul 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/rag/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kuncie Bootcamp - AI Academy Tier 3 Builder</title>
       <link>/project/2607_kuncie_llm_bootcamp/</link>
       <pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
       <guid>/project/2607_kuncie_llm_bootcamp/</guid>
       <description>&lt;p&gt;I have the opportunity to help a private company to learn more about LLM and it&amp;rsquo;s application.&#xA;Start from basic chat application into deployment ready, secure and robust LLM application.&#xA;The event organized by &lt;a href=&#34;https://www.kuncie.com/&#34;&gt;Kuncie&lt;/a&gt;, one of the edutech company in Indonesia.&lt;/p&gt;&#xA;&lt;p&gt;Source code available on &lt;a href=&#34;https://github.com/adibPr/kuncie-ai-academy/&#34;&gt;github&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Data Exploratory of My Life (with LLM)</title>
-      <link>/posts/20250523---data-exploratory-of-my-life/</link>
-      <pubDate>Sun, 18 May 2025 00:00:00 +0000</pubDate>
-      <guid>/posts/20250523---data-exploratory-of-my-life/</guid>
-      <description>&lt;p&gt;As someone who works with data daily, have you ever wondered what insights you could gain if you collected and analyzed your own life data? In today&amp;rsquo;s age, everything is being recorded: your search history, your music, your groceries, even your location. Imagine if we could find an optimum path for our commute, uncover different hidden personas within our lives, or simply just find out where all the time goes.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

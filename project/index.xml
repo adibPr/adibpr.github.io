@@ -6,8 +6,15 @@
     <description>Recent content in My Project on Adib.notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kuncie Bootcamp - AI Academy Tier 3 Builder</title>
+      <link>/project/2607_kuncie_llm_bootcamp/</link>
+      <pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>/project/2607_kuncie_llm_bootcamp/</guid>
+      <description>&lt;p&gt;I have the opportunity to help a private company to learn more about LLM and it&amp;rsquo;s application.&#xA;Start from basic chat application into deployment ready, secure and robust LLM application.&#xA;The event organized by &lt;a href=&#34;https://www.kuncie.com/&#34;&gt;Kuncie&lt;/a&gt;, one of the edutech company in Indonesia.&lt;/p&gt;&#xA;&lt;p&gt;Source code available on &lt;a href=&#34;https://github.com/adibPr/kuncie-ai-academy/&#34;&gt;github&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>AWS User Group Meetup - Scalable Big Data ETL with Spark and AWS StepFunction</title>
       <link>/project/2504_talk_aws/</link>

@@ -6,8 +6,15 @@
     <description>Recent content in Event on Adib.notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/event/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS Summit 2026</title>
+      <link>/posts/20260817---aws-summit-2026/</link>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>/posts/20260817---aws-summit-2026/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://bucket1.is3.cloudhost.id/blog/20260817%20-%20AWS%20Summit%202026/20260817_aws_summit_2026.jpg&#34; alt=&#34;presenter_img&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Attending AWS Summit 2026 last week at Pacific Place Jakarta. The crowd is super full. Some of my friends who are late are not being allowed to enter (unfortunately). I&amp;rsquo;m not sure whether the EO has miscommunication regarding the venue capacity or the total number of participants are simply too big, but this event must be one of the most famous events in Jakarta for the tech industry.&lt;/p&gt;&#xA;&lt;p&gt;I think the theme for this summit is quite clear, they want to introduce their &lt;a href=&#34;https://nova.amazon.com/&#34;&gt;Nova&lt;/a&gt; model, &lt;a href=&#34;https://kiro.dev/&#34;&gt;Kiro&lt;/a&gt; agent tools, and &lt;a href=&#34;https://aws.amazon.com/quick/&#34;&gt;Amazon Quick&lt;/a&gt;. There are some dev/playground areas regarding Kiro. Spec development itself isn&amp;rsquo;t new. We have OpenSpec and spec kit from GitHub. But Kiro bundles that into your agent editor.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>AWS Community Day</title>
       <link>/posts/20241212---aws-community/</link>
